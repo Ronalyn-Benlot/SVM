@@ -1,0 +1,115 @@
+
+h1{
+	text-align: center;
+}
+
+.textbox{
+	text-align: center;
+	
+}
+
+#text{
+	height: 200px;
+	width: 800px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.button{
+	text-align: center;
+}
+
+.btn1{
+	height: 25px; 
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.btn2{
+	height: 25px;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.btn3{
+	height: 25px;
+	margin-right: 500px	;
+	font-weight: bold;
+}
+
+.btn4{
+	height: 25px;
+	font-weight: bold;
+}
+
+.container{
+	
+
+}
+#icon img{
+	height: 80px; position: fixed; right: 1000px;top: 10px;
+}
+#fear img{
+	height: 150px;
+    position: fixed;left: 250px;top: 355px;
+
+}
+
+#anger img{
+	height: 105px;
+    position: fixed;left: 410px; top: 370px;
+
+}
+
+#joy img{
+	height: 140px;
+    position: fixed;left: 500px;top: 355px;
+}
+
+#sad img{
+	height: 120px;
+    position: fixed;right: 465px;top: 365px;
+
+}
+
+#disgust img{
+	height: 103px;
+    position: fixed;right: 298px;top: 375px;
+
+}
+
+#surprise img{
+	height: 104px;
+    position: fixed;right: 150px;top: 377px;
+}
+
+label{
+	position: fixed;left: 450px; top: 690px;
+}
+
+#fear h3{
+	position: fixed; left: 290px; top: 460px;
+}
+
+#anger h3{
+	position: fixed; left: 470px; top: 460px;
+}
+
+#joy h3{
+	position: fixed; left: 670px; top: 460px;
+}
+
+#sad h3{
+	position: fixed; left: 840px; top: 460px;
+}
+
+#disgust h3{
+	position: fixed; left: 1010px; top: 460px;
+}
+
+#surprise h3{
+	position: fixed; left: 1190px; top: 460px;
+}
+
+
+
