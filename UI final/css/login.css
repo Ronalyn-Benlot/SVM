@@ -15,7 +15,7 @@ body{
 	.form-box
 	{
 		width:360px;
-		height:430px;
+		height:470px;
 		position:relative;
 		background:hsla(0, 80%, 73%, 0.893);
 		overflow: hidden;
@@ -67,7 +67,7 @@ body{
 	}
 	#btn
 	{
-		top: 0;
+		padding-bottom:20px;
 		left:0;
 		position: absolute;
 		width: 110px;
@@ -109,7 +109,7 @@ body{
 	.submit-btn
 	{
 		width: 85%;
-		padding: 10px 30px;
+		padding: 10px 80px;
 		cursor: pointer;
 		display: block;
 		margin: auto;
@@ -117,7 +117,9 @@ body{
 		border: 0;
 		outline: none;
 		border-radius: 30px;
+		color: black;
 	}
+
 	.check-box
 	{
 		margin: 30px 10px 34px 0;
@@ -126,7 +128,15 @@ body{
 	{
 		color:#777;
 		font-size:12px;
-		bottom:68px;
+		bottom:105px;
+		position:absolute;
+	}
+	p
+	{
+		color:#777;
+		font-size:12px;
+		bottom:70px;
+		left: 20px;
 		position:absolute;
 	}
 	#login
@@ -149,3 +159,7 @@ body{
 		color:white;
 		font-size: 15;
 	}
+
+#login a{
+	color: #DA0C81;
+}
