@@ -1,8 +1,8 @@
 
 body{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-image:url("../assets/img/bg.png");
+    background-size: cover; 
+    background-repeat: no-repeat; 
     
 }
 *
@@ -10,6 +10,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	text-decoration:none;
 }
 
 	.form-box
@@ -22,7 +23,7 @@ body{
 	}
 	.form2 img {
 	width: inherit;
-	padding-top: 20px;
+	height: inherit;
 
 	}
 	h1{
@@ -38,7 +39,7 @@ body{
 
 		background:#ffffff00;
 		width:360px;
-		height:430px;
+		height:470px;
 		position:relative;
 		overflow: hidden;
 	}
@@ -161,5 +162,93 @@ body{
 	}
 
 #login a{
-	color: #DA0C81;
+	color: #000000;
+}
+
+/*header*/
+.top header{
+  background-color: #ffffff;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 70px;
+	position: relative;	
+}
+
+.top h3{
+ font-size: 25px;
+ font-family: Maiden Orange;
+color: black;
+ position: absolute;
+margin-left: 130px;
+padding-top: 25px;
+}
+.top .logo img {
+  max-height: 70px;
+  margin-left: 50px;
+position: absolute;
+	
+}
+
+@media (max-width: 1200px) {
+  .top .logo {
+    order: 1;
+  }
+  .top .navmenu {
+ 
+}
+}
+
+/* Desktop Navigation */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+	  float: right;
+	  margin-right: 20px;
+	  padding-top: 13px;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: pink;
+  }
+
 }
