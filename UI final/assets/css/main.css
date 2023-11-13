@@ -183,8 +183,9 @@ h3{
   margin-left: 50px;
 }
 @media (max-width: 1200px) {
-  .header .logo {
+  .top .logo {
     order: 1;
+  
   }
   .header .navmenu {
     order: 3;
@@ -235,7 +236,7 @@ section {
 # Navigation Menu
 --------------------------------------------------------------*/
 /* Desktop Navigation */
-@media (min-width: 1200px) {
+@media (min-width: 300px) {
   .navmenu {
     padding: 0;
   }
@@ -565,11 +566,11 @@ section {
 .hero .container {
  justify-content: center;
   z-index: 3;
-  background-color: #ffffff00;
+  
   width:1000px;
   position:relative;
   overflow: hidden;
-  margin-left: 280px;
+  margin-left: 400px;
   padding-bottom:400px;
   text-align: center;
 }
@@ -639,7 +640,7 @@ section {
   background-color: rgba(var(--primary-color-rgb), 0.9);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 300px) {
   .hero h2 {
     font-size: 32px;
   }
@@ -654,7 +655,10 @@ section {
     font-size: 18px;
   }
 }
-
+.hero.container{
+	justify-content: center;
+	
+}
 /* Clients Section - Home Page
 ------------------------------*/
 .clients {

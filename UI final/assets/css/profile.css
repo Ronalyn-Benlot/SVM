@@ -6,6 +6,8 @@
   box-sizing: border-box;
   list-style: none;
   font-family: 'Josefin Sans', sans-serif;
+	  text-decoration: none;
+
 }
 
 body{
@@ -113,5 +115,89 @@ body{
   display: block;
   font-size: 18px;
 	justify-content: center;
+
+}
+
+
+.top header{
+  background-color: white;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 70px;
+}
+
+.top h3{
+ font-size: 25px;
+ font-family: Maiden Orange;
+color: black;
+ position: absolute;
+margin-left: 130px;
+padding-top: 25px;
+}
+.top .logo img {
+  max-height: 70px;
+  margin-left: 50px;
+position: absolute;
+	
+}
+
+@media (max-width: 1200px) {
+  .top .logo {
+    order: 1;
+  }
+}
+
+/* Desktop Navigation */
+@media (min-width: 300px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+	  float: right;
+	  margin-right: 20px;
+	  padding-top: 13px;
+  }
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: pink;
+  }
 
 }
