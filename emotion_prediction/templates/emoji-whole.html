@@ -1,0 +1,85 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{%static 'assets/css/emoji.css'%}">
+  <title>EMOJ-I-ON</title>
+</head>
+<body>
+	<div class="top">
+	<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+		<img src="{%static 'assets/img/icon.png' %}">
+      </a>
+      <center><h3>Emoj-i-on</h3></center>
+      <!-- Nav Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'home' %}#hero" >Home</a></li>
+          <li><a href="{% url 'home' %}#about">About</a></li>
+          <li><a href="{% url 'home' %}#team">Team</a></li>
+          <li><a href="{% url 'home' %}#contact">Contact</a></li>
+		  <li><a href="{% url 'login' %}">Login</a></li>
+		<li><a href="{% url 'profile' %}"><img src="{% static 'assets/img/proficon.png' %}"></a></li>
+
+        </ul>
+      </nav><!-- End Nav Menu --> 
+      </div>
+      <br>	
+	<h1>CHILDHOOD TALES<br>EMOTION PREDICTOR</h1>
+	
+<div class="container">
+
+	<form>
+        <input id="text" type="text" name="" placeholder="Upload your file here...">
+    </form>  
+    <a href="{%url 'paragraph' %}"><button type="submit1" name="paragraph" id="paragraph" class="paragraph_btn">PARAGRAPH</button></a>
+    <button type="submit2" name="whole" id="whole" class="whole_btn">WHOLE</button>
+    <button type="submit3" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button>
+
+
+	<h6 class="fear">FEAR</h6>
+
+	<h6 class="anger">ANGER</h6>
+
+	<h6 class="joy">JOY</h6>
+
+	<h6 class="sadness">SADNESS</h6>
+
+	<h6 class="disgust">DISGUST</h6>
+
+	<h6 class="surprise">SUPRISE</h6>
+	<br>
+
+	<img class="img1" src="{%static 'assets/img/fear.png' %}">
+
+	<img class="img2" src="{%static 'assets/img/angry.png' %}">
+
+	<img class="img3" src="{%static 'assets/img/happy.png' %}">
+
+	<img class="img4" src="{%static 'assets/img/sad.png' %}">
+
+	<img class="img5" src="{%static 'assets/img/disgust.png' %}">
+
+	<img class="img6" src="{%static 'assets/img/surprise.png' %}">
+	<br>
+	<p class="p1">0%</p>
+
+	<p class="p2">0%</p>
+
+	<p class="p3">0%</p>
+
+	<p class="p4">0%</p>
+
+	<p class="p5">0%</p>
+
+	<p class="p6">0%</p>
+<br>
+<p class="emotion">Emotion Predicted:</p>
+</div>
+</body>
+</html>

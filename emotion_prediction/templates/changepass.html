@@ -1,0 +1,61 @@
+{% load static %}
+<!Doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{%static 'assets/css/forgotpassword.css' %}" rel="stylesheet">
+	<title>Forgot Password</title>
+</head>
+<body>
+	<div class="top">
+	<header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+		<img src="{%static 'assets/img/icon.png' %}">
+      </a>
+      <center><h3>Emoj-i-on</h3></center>
+      <!-- Nav Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'home' %}#hero" >Home</a></li>
+          <li><a href="{% url 'home' %}#about">About</a></li>
+          <li><a href="{% url 'home' %}#team">Team</a></li>
+          <li><a href="{% url 'home' %}#contact">Contact</a></li>
+		  <li><a href="{% url 'login' %}"class="active">Login</a></li>
+		  <li><a href="{% url 'profile' %}"><img src="{%static 'assets/img/proficon.png' %}"></a></li>
+
+        </ul>
+      </nav><!-- End Nav Menu -->
+
+     
+
+    </div>
+	<div class="row">
+		<h1>Change Password</h1>
+		
+		<div class="form-group">
+			<p><label for="username">Current Password</label></p>
+			<input type="email" name="user_email" id="user_email">
+			
+			<p><label for="username">New Password</label></p>
+			<input type="email" name="user_email" id="user_email">
+			
+			<p><label for="username">Confirm New Password</label></p>
+			<input type="email" name="user_email" id="user_email">
+			
+			<br>
+			<button onclick="showSpinner()">Update Password</button>
+		</div>
+		
+		<div class="footer">
+			<a href="{%url 'login' %}">Sign In</a>
+			
+		</div>
+	</div>
+</body>
+</html>

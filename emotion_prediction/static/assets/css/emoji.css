@@ -1,0 +1,904 @@
+*{
+	background: rgb(0, 128, 128);
+	font-family: Elephant;
+	font-weight: bold;
+	font-size: 70px;
+	display: fixed;
+	text-decoration: none;
+}
+
+h1{
+	font-size: 40px;
+	text-align: center;
+	color: rgb(240, 230, 140);
+}
+
+.container{
+	position: fixed;
+}
+
+
+form{
+  margin-left: 100px;
+}
+
+#text{
+	height: 250px;
+	width: 1300px;
+	left: 105px;
+	font-size: 22px;
+	margin-top: 20px;
+	font-family: sans-serif;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 3px solid black;
+    background-color: white;
+    transform: translateY(-15%);
+
+}
+
+
+.paragraph_btn{
+	color: white;
+	background-color: black;
+	border-radius: 10px;
+	border: 3px solid black;
+	font-size: 20px;
+	height: 40px;
+	width: 170px;
+	margin-left: 100px;
+    transform: translateY(-255%);
+}
+
+.whole_btn{
+	background-color: white;
+	border-radius: 10px;
+	border: 3px solid black;
+	font-size: 20px;
+	height: 40px;
+	width: 170px;
+	margin-left: -30px;
+    transform: translateY(-255%);
+}
+
+.analyze_btn{
+	background-color: rgb(240, 230, 140);
+	border-radius: 10px;
+	border: 3px solid black;
+	font-size: 20px;
+	height: 40px;
+	width: 170px;
+	margin-left: 785px;
+    transform: translateY(-255%);
+}
+
+/*.container-second h6{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 133px;
+	justify-content: center;
+	-ms-transform: translateY(-655%);
+    transform: translateY(-655%);
+}*/
+
+.fear{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 215px;
+	justify-content: center;
+    transform: translateY(-730%);
+}
+
+.anger{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 145px;
+	justify-content: center;
+    transform: translateY(-725%);
+}
+
+.joy{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 135px;
+	justify-content: center;
+    transform: translateY(-725%);
+}
+
+.sadness{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 130px;
+	justify-content: center;
+    transform: translateY(-730%);
+}
+
+.disgust{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 90px;
+	justify-content: center;
+    transform: translateY(-720%);
+}
+
+.surprise{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 95px;
+	justify-content: center;
+    transform: translateY(-720%);
+}
+
+.img1{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin-left: 190px;
+    transform: translateY(-160%);
+}
+
+.img2{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin-left: 100px;
+    transform: translateY(-158%);
+}
+
+
+.img3{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin-left: 90px;
+    transform: translateY(-158%);
+}
+
+.img4{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin-left: 90px;
+    transform: translateY(-158%);
+}
+
+.img5{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin-left: 75px;
+    transform: translateY(-158%);
+}
+
+.img6{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin-left: 70px;
+    transform: translateY(-158%);
+}
+
+.p1{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 236px;
+    transform: translateY(-1110%);
+}
+
+.p2{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 170px;
+    transform: translateY(-1110%);
+}
+
+.p3{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 165px;
+    transform: translateY(-1110%);
+}
+
+.p4{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 165px;
+    transform: translateY(-1110%);
+}
+
+.p5{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 145px;
+    transform: translateY(-1110%);
+}
+
+.p6{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 150px;
+    transform: translateY(-1110%);
+}
+
+
+/*.container-second p{
+	color: white;
+	display: inline-block;
+	font-size: 15px;
+	margin-left: 125px;
+    transform: translateY(-8110%);
+
+}*/
+	
+/*
+.container-second img{
+	display: inline-block;
+	height: 100px;
+	width: 100px;
+	margin-left: 98px;
+	-ms-transform: translateY(-150%);
+    transform: translateY(-150%);
+
+}*/
+
+.emotion{
+  background-color: white;
+  font-size: 15px;
+  width: 300px;
+  height: 15px;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 140px;
+  transform: translateY(-580%);
+}
+
+.container input[type="submit1"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.container button[type="submit1"]:hover
+{
+    cursor: pointer;
+    background: white;
+    color: black;
+}
+
+
+.container input[type="submit2"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.container button[type="submit2"]:hover
+{
+    cursor: pointer;
+    background: black;
+    color: white;
+}
+
+.container input[type="submit3"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.container button[type="submit3"]:hover
+{
+    cursor: pointer;
+    background-color: black;
+    color: rgb(240, 230, 140);
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+	h1{
+		font-size: 30px;
+		margin-left: 20px;
+	}
+
+	#text{
+	height: 200px;
+	width: 650px;
+	margin-top: 10px;
+	left: 105px;
+	margin-left: 70px;
+	}
+
+	.paragraph_btn{
+		margin-left: 170px;
+	}
+
+	.analyze_btn{
+		margin-left: 135px;
+		transform: translateY(-255%);
+	}
+	.fear{
+		font-size: 12px;
+		margin-left: 195px;
+		transform: translateY(-150px);
+	}
+
+	.anger{
+		font-size: 12px;
+		margin-left: 40px;
+		transform: translateY(-150px);
+	}
+
+	.joy{
+		font-size: 12px;
+		margin-left: 50px;
+		transform: translateY(-150px);
+	}
+
+	.sadness{
+		font-size: 12px;
+		margin-left: 40px;
+		transform: translateY(-150px);
+	}
+
+	.disgust{
+		font-size: 12px;
+		margin-left: 30px;
+		transform: translateY(-150px);
+	}
+
+	.surprise{
+		font-size: 12px;
+		margin-left: 20px;
+		transform: translateY(-150px);
+	}
+
+	.img1{
+		height: 80px;
+		width: 80px;
+		margin-left: 180px;
+		transform: translateY(-170px);
+	}
+
+	.img2{
+		height: 80px;
+		width: 80px;
+		padding: 0px;
+		margin-left: 10px;
+		transform: translateY(-170px);
+	}
+
+	.img3{
+		height: 80px;
+		width: 80px;
+		margin-left: 5px;
+		transform: translateY(-170px);
+	}
+
+	.img4{
+		height: 80px;
+		width: 80px;
+		margin-left: 5px;
+		transform: translateY(-170px);
+	}
+
+	.img5{
+		height: 80px;
+		width: 80px;
+		margin-left: 15px;
+		transform: translateY(-170px);
+	}
+
+	.img6{
+		height: 80px;
+		width: 80px;
+		margin-left: 5px;
+		transform: translateY(-170px);
+	}
+
+	.p1{
+		font-size: 12px;
+		margin-left: 210px;
+		transform: translateY(-240px);
+	}
+
+	.p2{
+		font-size: 12px;
+		margin-left: 70px;
+		transform: translateY(-240px);
+	}
+
+	.p3{
+		font-size: 12px;
+		margin-left: 65px;
+		transform: translateY(-240px);
+	}
+
+	.p4{
+		font-size: 12px;
+		margin-left: 65px;
+		transform: translateY(-240px);
+	}
+
+	.p5{
+		font-size: 12px;
+		margin-left: 75px;
+		transform: translateY(-240px);
+	}
+
+	.p6{
+		font-size: 12px;
+		margin-left: 65px;
+		transform: translateY(-240px);
+	}
+
+	.emotion{
+		font-size: 12px;
+		margin-left: 170px;
+		width: 190px;
+		height: 10px;
+		border: 2px solid black;
+		transform: translateY(-250px);
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+	h1{
+		font-size: 20px;
+	}
+
+	#text{
+	height: 200px;
+	width: 650px;
+	left: 105px;
+	margin-top: 20px;
+	margin-left: -50px;
+	}
+
+	.paragraph_btn{
+		margin-left: 50px;
+	}
+
+	.fear{
+		margin-left: 75px;
+	}
+
+	.img1{
+		margin-left: 60px;
+	}
+
+	.p1{
+		margin-left: 90px;
+	}
+
+	.emotion{
+		margin-left: 70px;
+	}
+
+	@media only screen and (max-width: 570px){
+		h1{
+			font-size: 15px;
+		}
+
+		#text{
+			height: 150px;
+			width: 500px;
+			margin-left: -73px;
+			font-size: 15px;
+		}
+
+		.paragraph_btn{
+			height: 27px;
+			width: 120px;
+			font-size: 13px;
+			border-radius: 5px;
+			border: 2px solid black;
+			margin-left: 27px;
+			transform: translateY(-90px);
+		}
+
+		.whole_btn{
+			height: 27px;
+			width: 120px;
+			font-size: 13px;
+			border-radius: 5px;
+			border: 2px solid black;
+			transform: translateY(-90px);
+		}
+
+		.analyze_btn{
+			height: 27px;
+			width: 120px;
+			font-size: 13px;
+			border-radius: 5px;
+			border: 2px solid black;
+			transform: translateY(-90px);
+		}
+
+		.fear{
+			font-size: 10px;
+			margin-left: 35px;
+		}
+
+		.anger{
+			font-size: 10px;
+			margin-left: 20px;
+		}
+
+		.joy{
+			font-size: 10px;
+			margin-left: 25px;
+		}
+
+		.sadness{
+			font-size: 10px;
+			margin-left: 20px;
+		}
+
+		.disgust{
+			font-size: 10px;
+			margin-left: 20px;
+		}
+
+		.surprise{
+			font-size: 10px;
+			margin-left: 20px;
+		}
+
+		.img1{
+			width: 70px;
+			height: 70px;
+			margin-left: 15px;
+		}
+
+		.img2{
+			width: 70px;
+			height: 70px;
+			margin-left: -10px;
+		}
+
+		.img3{
+			width: 70px;
+			height: 70px;
+			margin-left: -10px;
+		}
+
+		.img4{
+			width: 70px;
+			height: 70px;
+			margin-left: -5px;
+		}
+
+		.img5{
+			width: 70px;
+			height: 70px;
+			margin-left: 7px;
+		}
+
+		.img6{
+			width: 70px;
+			height: 70px;
+		}
+
+		.p1{
+			font-size: 10px;
+			margin-left: 45px;
+		}
+
+		.p2{
+			font-size: 10px;
+			margin-left: 40px;
+		}
+
+		.p3{
+			font-size: 10px;
+			margin-left: 45px;
+		}
+
+		.p4{
+			font-size: 10px;
+			margin-left: 45px;
+		}
+
+		.p5{
+			font-size: 10px;
+			margin-left: 55px;
+		}
+
+		.p6{
+			font-size: 10px;
+			margin-left: 60px;
+		}
+
+		.emotion{
+			font-size: 12px;
+			width: 200px;
+			height: 5px;
+			padding: 0px 20px 10px;
+			margin-left: 40px;
+		}
+
+
+	}
+
+	@media(max-width: 425px){
+		h1{
+			font-size: 12px;
+		}
+		#text{
+			height: 150px;
+	        width: 310px;
+	        left: 105px;
+	        margin-top: 20px;
+	        margin-left: -50px;
+		}
+
+		.paragraph_btn{
+			height: 27px;
+			width: 120px;
+			font-size: 13px;
+			border-radius: 5px;
+			border: 2px solid black;
+			margin-left: 27px;
+			transform: translateY(-90px);
+		}
+
+		.whole_btn{
+			height: 27px;
+			width: 120px;
+			font-size: 13px;
+			border-radius: 5px;
+			border: 2px solid black;
+			transform: translateY(-90px);
+		}
+
+		.analyze_btn{
+			height: 27px;
+			width: 120px;
+			font-size: 13px;
+			border-radius: 5px;
+			border: 2px solid black;
+			transform: translateY(-90px);
+		}
+
+		.fear{
+			font-size: 10px;
+			margin-left: 35px;
+		}
+
+		.anger{
+			font-size: 10px;
+			margin-left: 20px;
+		}
+
+		.joy{
+			font-size: 10px;
+			margin-left: 25px;
+		}
+
+		.sadness{
+			font-size: 10px;
+			margin-left: 20px;
+		}
+
+		.disgust{
+			font-size: 10px;
+			margin-left: 20px;
+		}
+
+		.surprise{
+			font-size: 10px;
+			margin-left: 20px;
+		}
+
+		.img1{
+			width: 70px;
+			height: 70px;
+			margin-left: 15px;
+		}
+
+		.img2{
+			width: 70px;
+			height: 70px;
+			margin-left: -10px;
+		}
+
+		.img3{
+			width: 70px;
+			height: 70px;
+			margin-left: -10px;
+		}
+
+		.img4{
+			width: 70px;
+			height: 70px;
+			margin-left: -5px;
+		}
+
+		.img5{
+			width: 70px;
+			height: 70px;
+			margin-left: 7px;
+		}
+
+		.img6{
+			width: 70px;
+			height: 70px;
+		}
+
+		.p1{
+			font-size: 10px;
+			margin-left: 45px;
+		}
+
+		.p2{
+			font-size: 10px;
+			margin-left: 40px;
+		}
+
+		.p3{
+			font-size: 10px;
+			margin-left: 45px;
+		}
+
+		.p4{
+			font-size: 10px;
+			margin-left: 45px;
+		}
+
+		.p5{
+			font-size: 10px;
+			margin-left: 55px;
+		}
+
+		.p6{
+			font-size: 10px;
+			margin-left: 60px;
+		}
+
+		.emotion{
+			font-size: 12px;
+			width: 200px;
+			height: 5px;
+			padding: 0px 20px 10px;
+			margin-left: 40px;
+		}
+
+
+	}
+	
+
+}
+
+/*header*/
+
+.top{
+	margin: 10px 0px 10px;
+}
+
+.top header{
+  background-color: white;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 80px;
+  margin-top: -32px;
+  position: relative;
+  
+}
+
+.top h3{
+ font-size: 25px;
+ font-family: Maiden Orange;
+ background-color: white;
+color: black;
+ position: absolute;
+margin-left: 130px;
+padding-top:30px;
+margin-top: 0px;
+}
+.top .logo img {
+  max-height: 80px;
+  margin-left: 50px;
+	position: absolute;
+	background-color: white;
+	
+}
+
+
+@media (max-width: 1200px) {
+  .top .logo {
+    order: 1;
+  }
+  .top .navmenu {
+ 
+}
+}
+
+
+/* Desktop Navigation */
+@media (min-width: 300px) {
+  .navmenu {
+    padding: 0;
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+	  float: right;
+	  margin-right: 20px;
+	  padding-top: 13px;
+	  background-color: white;
+  }
+	.navmenu ul img{
+		height: 30px;
+		width: auto;
+		background-color: white;
+	}
+
+  .navmenu li {
+    position: relative;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    background-color: white;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu li:last-child a {
+    padding-right: 0;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: pink;
+  }
+
+}
