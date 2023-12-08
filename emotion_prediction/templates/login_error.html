@@ -1,100 +1,110 @@
+
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            padding: 50px;
-            background-color: #f1cef8;
-            border-radius: 25px;
-            box-shadow: 0 0 0px rgba(189, 7, 7, 0.2);
-        }
-
-        h1 {
-            text-align: center;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            border: 2px solid #ccc;
-            border-radius: 6px;
-        }
-
-        button[type="submit"] {
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 7px;
-            cursor: pointer;
-        }
-
-        button[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        .form2 img {
-            width: inherit;
-            padding-top: 20px;
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      
+        <title>Home - Append Bootstrap Temlate</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+      
+      
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css'%} " rel="stylesheet">
+        <link href="{% static  'assets/vendor/swiper/swiper-bundle.min.css '%}" rel="stylesheet">
+        <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
         
-            }
-        .x{
-            color:#ff0000;
-        }
-    </style>
-</head>
+      
+        <!-- Template Main CSS File -->
+        <link href=" {% static 'assets/css/main.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "css/rs.css" %}">
+      
+      
+        <!-- =======================================================
+        * Template Name: Append
+        * Updated: Sep 18 2023 with Bootstrap v5.3.2
+        * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->
+      </head>
+      
+      <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+      
+        <!-- ======= Header ======= -->
+        <header id="header" class="header fixed-top d-flex align-items-center">
+          <div class="container-fluid d-flex align-items-center justify-content-between">
+            <a style=" align-items: start;"href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+              <img src="{% static 'assets/img/icon.png' %}">
+                  <h3>Emojion</h3>
+                 
+                </a>
+          
+      <br>
+            <!-- Nav Menu -->
+            <nav id="navmenu" class="navmenu">
+                <ul >
+                <li><a href="{% url 'home' %}#hero" class="active">Home</a></li>
+                <li><a href="{% url 'home' %}#about">About</a></li>
+                <li><a href="{% url 'home' %}#team">Team</a></li>
+                <li><a href="{% url 'home' %}#contact">Contact</a></li>
+                      <li><a href="{% url 'login' %}">Login</a></li>
+                      
+                </ul>
+      
+              <i class="mobile-nav-toggle "></i>
+            </nav><!-- End Nav Menu -->
+          </div>
+        </header>
+
 <body>
-    <div class="container">
-        <body bgcolor="pink">
-            <div class="container"> 
-                
-                <div class="form2">
-                     
-                    <center><h2>Welcome to Emoj-I-On</h2> 
-                    <h4>Emoj-i-on is a web application that <br>you can use to 
-                    analayze about the <br>content of your book</h4></center>
-                </div>
-                <form action="/login" method="post">
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form method="post" action="">
                     {% csrf_token %}
+                    <br>
+
                     <div class="x"> <p>Email or password wrong!</p></div>
-                    <div class="form-group">
-                        <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" required>
-                    </div>
-                    <input type='checkbox'class='check-box'><span>Remember Password</span> <br><br>
-                    <button type="submit">Log In</button><br><br> 
-                    <a href="{% url 'password_reset' %}">Forgot password?</a><br><br>
-                    <h5>Don't have an account?</h5>
-                    <a href="{% url 'register' %}">Sign Up</a>
+                        <div class="inputbox">
+                            
+                            <label for="username">Username</label>
+                            <br><br>
+                            <input type="text" id="username" name="username" required>
+
+                        </div>
+                        
+                        <div class="inputbox">
+                            <label for="username">Password</label>
+                            <br><br>
+                            <input type="password" id="password" name="password" required>
+
+                        </div>
+                        <button type="submit">Log In</button><br><br>
+            <p><a href="{% url 'password_reset' %}">Forgotten your password?</a></p>
+            <h5>Don't have an account?</h5>
+            <a href="{% url 'register' %}">Sign Up</a>
+                        <br><br>
+                    
+
+                   
                 </form>
-    </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+
+
+
+<div class="x"> <p>Email or password wrong!</p></div>
