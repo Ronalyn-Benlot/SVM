@@ -39,8 +39,8 @@ form{
 
 
 .paragraph_btn{
-	color: white;
-	background-color: black;
+	background-color: #fff;
+	
 	border-radius: 10px;
 	border: 3px solid black;
 	font-size: 20px;
@@ -51,7 +51,7 @@ form{
 }
 
 .whole_btn{
-	background-color: white;
+	background-color:white ;
 	border-radius: 10px;
 	border: 3px solid black;
 	font-size: 20px;
@@ -72,15 +72,7 @@ form{
     transform: translateY(-255%);
 }
 
-/*.container-second h6{
-	color: white;
-	display: inline-block;
-	font-size: 15px;
-	margin-left: 133px;
-	justify-content: center;
-	-ms-transform: translateY(-655%);
-    transform: translateY(-655%);
-}*/
+
 
 .fear{
 	color: white;
@@ -234,25 +226,6 @@ form{
 }
 
 
-/*.container-second p{
-	color: white;
-	display: inline-block;
-	font-size: 15px;
-	margin-left: 125px;
-    transform: translateY(-8110%);
-
-}*/
-	
-/*
-.container-second img{
-	display: inline-block;
-	height: 100px;
-	width: 100px;
-	margin-left: 98px;
-	-ms-transform: translateY(-150%);
-    transform: translateY(-150%);
-
-}*/
 
 .emotion{
   background-color: white;
@@ -276,10 +249,10 @@ form{
     border-radius: 20px;
 }
 
-.container button[type="submit1"]:hover
+.container button[type="submit1"].hover
 {
-    cursor: pointer;
-    background: white;
+  cursor: pointer;
+    background: black;
     color: black;
 }
 
@@ -294,11 +267,11 @@ form{
     border-radius: 20px;
 }
 
-.container button[type="submit2"]:hover
+.container button[type="submit2"] .hover
 {
     cursor: pointer;
     background: black;
-    color: white;
+    color: black;
 }
 
 .container input[type="submit3"]
@@ -802,15 +775,19 @@ form{
 	margin: 10px 0px 10px;
 }
 
+
 .top header{
-  background-color: white;
-  transition: all 0.5s;
-  z-index: 997;
-  height: 80px;
-  margin-top: -32px;
-  position: relative;
-  
+		background-color: white;
+		transition: all 0.5s;
+		z-index: 997;
+		height: 100px;
+		width: 1490px;
+		margin-top: -32px;
+		position: fixed;
+		margin-left: -10px;
+		
 }
+
 
 .top h3{
  font-size: 25px;
@@ -820,13 +797,14 @@ color: black;
  position: absolute;
 margin-left: 130px;
 padding-top:30px;
-margin-top: 0px;
+margin-top: 25px;
 }
 .top .logo img {
   max-height: 80px;
   margin-left: 50px;
 	position: absolute;
 	background-color: white;
+	padding-top: 20px;
 	
 }
 
@@ -855,7 +833,7 @@ margin-top: 0px;
     align-items: center;
 	  float: right;
 	  margin-right: 20px;
-	  padding-top: 13px;
+	  padding-top: 25px;
 	  background-color: white;
   }
 	.navmenu ul img{

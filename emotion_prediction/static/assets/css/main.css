@@ -587,16 +587,24 @@ section {
    align-content: center;
 }
 
-.hero button{
-	color: #11AAA4;
-	font-size:25px;
-	border-radius: 10px;
-	z-index: 100;
-	background-color: beige;
- text-align: center;
-	font-family: Bernard MT Condensed;
-	
-}
+.hero button {
+  color: black;
+  font-size: 30px;
+  border-radius: 10px;
+  z-index: 100;
+  background: linear-gradient(to right, #f08383, #FFDBAA); /* Gradient background */
+  text-align: center;
+  font-family: 'Bernard MT Condensed';
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1); /* Updated box shadow */
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
+  &:hover {
+      background: linear-gradient(to right, #FFDBAA, #FA7788); /* Gradient background on hover */
+      transform: scale(1.1);
+  }
+  }
 
 .hero h1 {
   color: var(--contrast-color);
