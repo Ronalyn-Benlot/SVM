@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{%static 'assets/css/login.css' %}">
 	
 	
-    <!---we had linked our css file----->
+    <!---we had linked our css file-->
 </head>
 <body>
 	
@@ -53,27 +53,31 @@
                     <button type='button'onclick='login()'class='toggle-btn'>Log In</button>
                     <button type='button'onclick='register()'class='toggle-btn'>Register</button>
                 </div>
-                <form id='login'  class='input-group-login'>
-                    <input type='text'class='input-field' placeholder='Email Id' required >
-		    <input type='password' class='input-field'placeholder='Enter Password' required>
-		    
-			<a href="{%url 'paragraph' %}"
-			<button type="submit" class="submit-btn"><center>Log in</center></button></a>
-			<br>
-			
-			<center><a href="forgotpassword.html">Forgot password?</a></center>
+                <form method="POST" id='login' class='input-group-login' >
+                    {% csrf_token %}
+                    <input type='text' name='username_log' class='input-field' placeholder='Username' required>                    
+                    <input type='password' name='password_log' class='input-field' placeholder='Enter Password' required>
+                    
+                    <button type="submit" class="submit-btn"><center>Log in</center></button>
+                    
+                    <br>
+                    
+                    <center><a href="forgotpassword.html">Forgot password?</a></center>
+                </form>
+                
 						
 		 </form>
-		 <form id='register' class='input-group-register'>
-		     <input type='text'class='input-field'placeholder='First Name' required>
-		     <input type='text'class='input-field'placeholder='Last Name ' required>
-		     <input type='email'class='input-field'placeholder='Email Id' required>
-		     <input type='password'class='input-field'placeholder='Enter Password' required>
-		     <input type='password'class='input-field'placeholder='Confirm Password'  required>
-		                                                
-			 
-				 <button type='submit'class='submit-btn'>Register</button>
-	         </form>
+		 <form method="POST" id='register' class='input-group-register'>
+            {% csrf_token %}
+            <input type='text' name='first_name' class='input-field' placeholder='First Name' required>
+            <input type='text' name='last_name' class='input-field' placeholder='Last Name ' required>
+            <input type='text' name='username' class='input-field' placeholder='Username' required>
+            <input type='email' name='email' class='input-field' placeholder='Email Id' required>
+            <input type='password' name='password' class='input-field' placeholder='Enter Password' required>
+            <input type='password' name='confirm_password' class='input-field' placeholder='Confirm Password' required>
+            
+            <button type='submit' class='submit-btn'>Register</button>
+        </form>
             </div>
             </div>
         </div>

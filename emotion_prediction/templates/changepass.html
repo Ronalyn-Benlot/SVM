@@ -37,20 +37,22 @@
     </div>
 	<div class="row">
 		<h1>Change Password</h1>
-		
+		<form method='POST'>
+			{% csrf_token %}
 		<div class="form-group">
 			<p><label for="username">Current Password</label></p>
-			<input type="email" name="user_email" id="user_email">
-			
-			<p><label for="username">New Password</label></p>
-			<input type="email" name="user_email" id="user_email">
-			
-			<p><label for="username">Confirm New Password</label></p>
-			<input type="email" name="user_email" id="user_email">
+    		<input type="password" name="old_password" id="user_email">
+    
+    		<p><label for="username">New Password</label></p>
+    		<input type="password" name="new_password" id="user_email">
+    
+    		<p><label for="username">Confirm New Password</label></p>
+    		<input type="password" name="confirm_password" id="user_email">
 			
 			<br>
-			<button onclick="showSpinner()">Update Password</button>
+			<button type="submit" onclick="showSpinner()">Update Password</button>
 		</div>
+	</form>
 		
 		<div class="footer">
 			<a href="{%url 'login' %}">Sign In</a>

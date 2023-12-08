@@ -37,7 +37,7 @@
 			<span><li><a href="{%url 'profile' %}"><img src="{%static 'assets/img/proficon.png' %}"></a></span>
 			<div class="sub-menu">
 			  <ul>
-				  <li> <a href="{%url 'change' %}">Change Password</a></li>
+				  <li> <a href="{%url 'password_change' %}">Change Password</a></li>
 				  <hr>
 				</ul>
 				
@@ -59,7 +59,7 @@
     <div class="left">
         <img src="{%static 'assets/img/user.jpeg' %}" alt="user" width="100">
         <h4>Name</h4>
-         <p>Teacher/Parent</p>
+         <p>{{ user.first_name }} {{ user.last_name }}</p>
     </div>
     <div class="right">
         <div class="info">
@@ -67,7 +67,7 @@
             <div class="info_data">
                  <div class="data">
                     <h4>Email</h4>
-                    <p>alex@gmail.com</p>
+                    <p>{{ user.email }}</p>
                  </div>
                  <div class="data">
                    <h4>Phone</h4>

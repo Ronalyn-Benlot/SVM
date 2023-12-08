@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 50px;
+            background-color: #f1cef8;
+            border-radius: 25px;
+            box-shadow: 0 0 0px rgba(189, 7, 7, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .form2 img {
+            width: inherit;
+            padding-top: 20px;
+        
+            }
+        .x{
+            color:#ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <body bgcolor="pink">
+            <div class="container"> 
+                
+                <div class="form2">
+                     
+                    <center><h2>Welcome to Emoj-I-On</h2> 
+                    <h4>Emoj-i-on is a web application that <br>you can use to 
+                    analayze about the <br>content of your book</h4></center>
+                </div>
+                <form action="/login" method="post">
+                    {% csrf_token %}
+                    <div class="x"> <p>Email or password wrong!</p></div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <input type='checkbox'class='check-box'><span>Remember Password</span> <br><br>
+                    <button type="submit">Log In</button><br><br> 
+                    <a href="{% url 'password_reset' %}">Forgot password?</a><br><br>
+                    <h5>Don't have an account?</h5>
+                    <a href="{% url 'register' %}">Sign Up</a>
+                </form>
+    </div>
+</body>
+</html>
