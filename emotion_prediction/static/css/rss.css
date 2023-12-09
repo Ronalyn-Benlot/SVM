@@ -14,10 +14,11 @@ section {
     background-size: cover;
 }
 
-h4 {
-    color: red;
+.error {
+    color: red!important; 
     text-align: center;
 }
+
 
 .form-box {
     position: relative;

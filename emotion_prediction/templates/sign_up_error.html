@@ -71,55 +71,43 @@
 <body>
     <section>
         <div class="form-box">
+            <div class="error" style="color: red; text-align: center;">  
+                <p>Password does not match!</p>
+            </div>
+
             <div class="form-value">
+                
                 <form method="post" action="">
                     {% csrf_token %}
-                    
-
-                        
-                            <h4>Password Does not match!</h4>
-                        
 
                         <div class="inputbox">
                             
-                            <input type="text" id="lastname" name="last_name" placeholder="Last Name"required>
-                        
-                        </div>
-            
-                        <div class="inputbox">
+                <input type="text" id="lastname" name="last_name" placeholder="Last Name"required>
+            </div>
+            <div class="inputbox">
                 
-                
-                            <input type="text" id="firstname" name="first_name" placeholder="First Name" required>
-            
-                        </div>
-            
-                        <div class="inputbox">
+                <input type="text" id="firstname" name="first_name" placeholder="First Name" required>
+            </div>
+            <div class="inputbox">
 
-                
-                            <input type="text" id="username" name="username" placeholder="Username" required>
-            
-                        </div>
-            
-                        <div class="inputbox">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="inputbox">
 
-                
-                            <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
 
                         </div>
                         
                         <div class="inputbox">
                             
-                        <input type="password" id="password" name="password" placeholder="Password" minlength="8" required>
-                        
-                        </div>
-            
-                        <div class="inputbox">
+                <input type="password" id="password" name="password" placeholder="Password" minlength="8" required>
+            </div>
+            <div class="inputbox">
 
-                
-                            <input type="password" id="confirm_password" name="confirm_password" placeholder="Retype Password"minlength="8" required>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Retype Password"minlength="8" required>
 
                         </div>
-                        <button type="submit">Sign Up</button><br><br>
+                       <button type="submit">Sign Up</button><br><br>
             
                     
 
