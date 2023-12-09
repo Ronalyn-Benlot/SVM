@@ -19,14 +19,40 @@ def register(request):
 
         # Check if passwords match
         if password != confirm_password:
-            return HttpResponse("Passwords do not match")
+            return redirect(register_error)
 
         # Create a new user
         my_user = User.objects.create_user(username=username,email=email, password=password, first_name=first_name, last_name=last_name)
         
-        return HttpResponse("User created successfully")
+        return redirect(register_success)
   
     return render(request, 'sign_up.html')
+
+
+def register_error(request):
+    if request.method == 'POST':
+        first_name = request.POST['first_name']
+        last_name = request.POST['last_name']
+        username = request.POST['username']
+        email = request.POST['email']
+        password = request.POST['password']
+        confirm_password = request.POST['confirm_password']
+
+        # Check if passwords match
+        if password != confirm_password:
+            return redirect(register_error)
+
+        # Create a new user
+        my_user = User.objects.create_user(username=username,email=email, password=password, first_name=first_name, last_name=last_name)
+        
+        return redirect(register_success)
+  
+    return render(request, 'sign_up_error.html')
+
+def register_success(request):
+    return render(request, "success_reg.html")
+
+
 
 
 def user_login(request):

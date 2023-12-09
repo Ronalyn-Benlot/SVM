@@ -1,0 +1,35 @@
+
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/rs.css" %}">
+    <title>Reset Password</title>
+</head>
+<style>
+    p{
+        text-align:center;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <h2>YOHOHOHO</h2>
+
+                    <p>User Created Successfuly.</p>  
+                    <a href="{% url 'login' %}"><button type="button">Log in</button></a>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
