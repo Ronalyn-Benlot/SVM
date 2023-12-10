@@ -6,6 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{%static 'assets/css/emoji.css' %}">
   <title>EMOJ-I-ON</title>
+  <style>
+	/* Style for the normal state of the button */
+	.paragraph_btn {
+		
+		text-decoration: none;
+		background-color:#0a0303;
+		color: #ffffff;
+		cursor: pointer;
+	}
+
+	/* Style for the active state of the button */
+	.paragraph_btn.active {
+		background-color: black;
+	}
+</style>
 </head>
 <body>
 	<div class="top">
@@ -81,6 +96,20 @@
 <br>
 <p class="emotion">Emotion Predicted:</p>
 </div>
+
+<script>
+	// JavaScript function to toggle the active state of the buttons
+	function toggleButton(button) {
+		// Remove active class from all buttons
+		var buttons = document.querySelectorAll('.my-button');
+		buttons.forEach(function(btn) {
+			btn.classList.remove('active');
+		});
+
+		// Add active class to the clicked button
+		button.classList.add('active');
+	}
+</script>
 </body>
 </html>
 

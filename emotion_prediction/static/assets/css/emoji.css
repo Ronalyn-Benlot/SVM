@@ -248,7 +248,14 @@ form{
     font-size: 18px;
     border-radius: 20px;
 }
+.paragraph_btn:hover{
+	background-color:rgb(240, 230, 140);
 
+}
+.whole_btn:hover{
+	background-color:rgb(240, 230, 140);
+
+}
 .container button[type="submit1"].hover
 {
   cursor: pointer;
@@ -880,3 +887,36 @@ margin-top: 25px;
   }
 
 }
+
+ .paragraph_btn a,
+.paragraph_btn a:focus {
+    color: var(--nav-color);
+    padding: 18px 15px;
+    font-size: 16px;
+    font-family: var(--nav-font);
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+ .paragraph_btn a i,
+ .paragraph_btn a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+ .paragraph_btn li:last-child a {
+    padding-right: 0;
+  }
+
+   .paragraph_btn li:hover>a,
+   .paragraph_btn .active,
+   .paragraph_btn .active:focus {
+    color: pink;
+  }
+
