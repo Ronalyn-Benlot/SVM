@@ -27,13 +27,6 @@
   <link href=" {% static 'assets/css/main.css' %}" rel="stylesheet">
 
 
-  <!-- =======================================================
-  * Template Name: Append
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
@@ -41,7 +34,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container-fluid d-flex align-items-center justify-content-between">
-      <a style=" align-items: start;"href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <a style=" align-items: start;" href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
         <img src="{% static 'assets/img/icon.png' %}">
             <h3>Emojion</h3>
            
@@ -69,7 +62,7 @@
 
     <!-- Hero Section - Home Page -->
     <section id="hero" class="hero">
-      <img src="{% static 'assets/img/hero-bg.jpg' %}" data-aos="fade-in">
+      <img src="{% static 'assets/img/bg.jpg' %}" data-aos="fade-in">
       <div class="container">
         <h1 data-aos="fade-up" data-aos-delay="100">EMOJ-I-ON</h1>
         <h2 data-aos="fade-up" data-aos-delay="100">The Magical Wizard!</h2>
@@ -83,9 +76,6 @@
       </div>
     </section><!-- End Hero Section -->
 
-    <!-- Clients Section - Home Page -->
-    
-    <!-- About Section - Home Page -->
     <section id="about" class="about">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -157,9 +147,7 @@
 
     </section><!-- End About Section -->
 
-    <!-- Stats Section - Home Page -->
     
-
    
     <!-- Team Section - Home Page -->
     <section id="team" class="team">
@@ -250,7 +238,7 @@
     </section><!-- End Team Section -->
 
    
-    <!-- Recent-posts Section - Home Page -->
+   
    
 
     <!-- Contact Section - Home Page -->
@@ -349,7 +337,7 @@
 
   </main>
 
-  <!-- ======= Footer ======= -->
+ 
  
        
 

@@ -10,7 +10,7 @@ section {
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url('../img/sunset.png') no-repeat;
+    background: url('../img/bg2.jpg') no-repeat;
     background-size: cover;
 }
 
@@ -45,9 +45,12 @@ h2 {
 
 .inputbox {
     position: relative;
-    margin: 15px 0;
-    width: 100%;
-    max-width: 250px;
+    margin: 15px ;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 300%;
+    width: 250px;
+    
 }
 
 .inputbox label {
@@ -55,7 +58,7 @@ h2 {
     top: 10px;
     left: -10px;
     color: white;
-    font-size: 0.8em;
+    font-size: 100px;
     pointer-events: none;
     transition: .3s;
 }
@@ -63,7 +66,7 @@ h2 {
 .inputbox input {
     width: 100%;
     height: 30px;
-    background: transparent;
+    background: pink;
     border: 1px solid rgba(225, 225, 225, 0.5);
     border-radius: 3px;
     outline: none;
