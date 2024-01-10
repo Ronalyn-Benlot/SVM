@@ -28,7 +28,7 @@
       
         <!-- Template Main CSS File -->
         <link href=" {% static 'assets/css/main.css' %}" rel="stylesheet">
-        <link rel="stylesheet" href="{% static "css/rss.css" %}">
+        <link rel="stylesheet" href="{% static "css/sign_up.css" %}">
       
       
         <!-- =======================================================
@@ -45,7 +45,7 @@
         <!-- ======= Header ======= -->
         <header id="header" class="header fixed-top d-flex align-items-center">
           <div class="container-fluid d-flex align-items-center justify-content-between">
-            <a style=" align-items: start;"href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <a style=" align-items: start;"href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
               <img src="{% static 'assets/img/icon.png' %}">
                   <h3>Emojion</h3>
                  
@@ -80,29 +80,29 @@
                   
                         <div class="inputbox">
                             
-                <input type="text" style="font-size: 10px;" id="lastname" name="last_name" placeholder="Last Name"required>
+                <input type="text" style="font-size: 15px;" id="lastname" name="last_name" placeholder="Last Name"required>
             </div>
             <div class="inputbox">
                 
-                <input type="text" style="font-size: 10px;" id="firstname" name="first_name" placeholder="First Name" required>
+                <input type="text" style="font-size: 15px;" id="firstname" name="first_name" placeholder="First Name" required>
             </div>
             <div class="inputbox">
 
-                <input type="text" style="font-size: 10px;" id="username" name="username" placeholder="Username" required>
+                <input type="text" style="font-size: 15px;" id="username" name="username" placeholder="Username" required>
             </div>
             <div class="inputbox">
 
-                <input type="email" style="font-size: 10px;" id="email" name="email" placeholder="Email" required>
+                <input type="email" style="font-size: 15px;" id="email" name="email" placeholder="Email" required>
 
                         </div>
                         
                         <div class="inputbox">
                             
-                <input type="password" style="font-size: 10px;" id="password" name="password" placeholder="Password" minlength="8" required>
+                <input type="password" style="font-size: 15px;" id="password" name="password" placeholder="Password" minlength="8" required>
             </div>
             <div class="inputbox">
 
-                <input type="password" style="font-size: 10px;" id="confirm_password" name="confirm_password" placeholder="Retype Password"minlength="8" required>
+                <input type="password" style="font-size: 15px;" id="confirm_password" name="confirm_password" placeholder="Retype Password"minlength="8" required>
 
                         </div>
                        <button type="submit">Sign Up</button><br><br>
