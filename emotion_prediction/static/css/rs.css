@@ -32,7 +32,9 @@ section {
     align-items: center;
 }
 
-
+p{
+    color: white;
+}
 h2 {
     font-size: 5em;
     color: white;
@@ -45,6 +47,7 @@ h2 {
     margin: 30px 0;
     width: 100%; /* Adjusted width to 100% */
     max-width: 310px; /* Optional: Set a maximum width if needed */
+    color: pink;
 }
 
 .inputbox label {

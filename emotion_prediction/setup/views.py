@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import User
+from .forms import Userform
 from django.contrib.auth import authenticate, login as auth_login,views as auth_views
 
 def home(request):
@@ -9,24 +10,38 @@ def home(request):
 
 
 def register(request):
-    if request.method == 'POST':
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-        confirm_password = request.POST['confirm_password']
+    form = Userform
 
-        # Check if passwords match
-        if password != confirm_password:
-            return redirect(register_error)
+    if request.method == "POST":
+        form = Userform(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Registration success!")
+            return redirect('login')
+    else:
+        messages.error(request, "Form is not valid")
+    
+    context = {"form": form}
+    return render(request, 'sign_up.html', context)    
+    
+    # if request.method == 'POST':
+    #     first_name = request.POST['first_name']
+    #     last_name = request.POST['last_name']
+    #     username = request.POST['username']
+    #     email = request.POST['email']
+    #     password = request.POST['password']
+    #     confirm_password = request.POST['confirm_password']
 
-        # Create a new user
-        my_user = User.objects.create_user(username=username,email=email, password=password, first_name=first_name, last_name=last_name)
+    #     # Check if passwords match
+    #     if password != confirm_password:
+    #         return redirect(register_error)
+
+    #     # Create a new user
+    #     my_user = User.objects.create_user(username=username,email=email, password=password, first_name=first_name, last_name=last_name)
         
-        return redirect(register_success)
+    #     return redirect(register_success)
   
-    return render(request, 'sign_up.html')
+    # return render(request, 'sign_up.html')
 
 
 def register_error(request):

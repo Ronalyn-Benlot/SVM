@@ -73,43 +73,46 @@
         <div class="form-box">
             <h5 style= color:white font->CREATE AN ACCOUNT</h5>
             <div class="form-value">
-                <form method="post" action="">
+                <!-- {% if messages %}
+                    {{ message }}
+                {% endif %} -->
+                <form method="post" action="{% url 'register' %}">
                     {% csrf_token %}
                     
-
-                  
-                        <div class="inputbox">
-                            
-                <input type="text" style="font-size: 15px;" id="lastname" name="last_name" placeholder="Last Name"required>
-            </div>
-            <div class="inputbox">
-                
-                <input type="text" style="font-size: 15px;" id="firstname" name="first_name" placeholder="First Name" required>
-            </div>
-            <div class="inputbox">
-
-                <input type="text" style="font-size: 15px;" id="username" name="username" placeholder="Username" required>
-            </div>
-            <div class="inputbox">
-
-                <input type="email" style="font-size: 15px;" id="email" name="email" placeholder="Email" required>
-
-                        </div>
+                    <div class="inputbox">
+                        <span style="font-size: 3px;">{{ form.last_name }}</span>    
+                    <!-- <input type="text" style="font-size: 15px;" id="lastname" name="last_name" placeholder="Last Name"required> -->
+                    </div>
+                    <span>{{ form.last_name.errors }}</span>
+                    <div class="inputbox">
+                        <span style="font-size: 3px;">{{ form.first_name }}</span>
+                        <!-- <input type="text" style="font-size: 15px;" id="firstname" name="first_name" placeholder="First Name" required> -->
+                    </div>
+                    <span>{{ form.first_name.errors }}</span>
+                    <div class="inputbox">
+                        <span style="font-size: 3px;">{{ form.username }}</span>
+                        <!-- <input type="text" style="font-size: 15px;" id="username" name="username" placeholder="Username" required> -->
+                    </div>
+                    <span>{{ form.username.errors }}</span>
+                    <div class="inputbox">
+                        <span style="font-size: 3px;">{{ form.email }}</span>
+                         <!-- <input type="email" style="font-size: 15px;" id="email" name="email" placeholder="Email" required> -->
+                    </div>
+                    <span>{{ form.email.errors }}</span>
+                    <div class="inputbox">
+                        <span style="font-size: 3px;">{{ form.password }}</span>    
+                        <!-- <input type="password" style="font-size: 15px;" id="password" name="password" placeholder="Password" minlength="8" required> -->
+                    </div>
+                    <span>{{ form.password.errors }}</span>
+                    <div class="inputbox">
+                        <span style="font-size: 3px;">{{ form.confirm_password }}</span>
+                        <!-- <input type="password" style="font-size: 15px;" id="confirm_password" name="confirm_password" placeholder="Retype Password"minlength="8" required> -->
+                    </div>
+                    <span>{{ form.confirm_password.errors }}</span>
+                    <button type="submit" name="register">Sign Up</button><br><br>
                         
-                        <div class="inputbox">
-                            
-                <input type="password" style="font-size: 15px;" id="password" name="password" placeholder="Password" minlength="8" required>
-            </div>
-            <div class="inputbox">
-
-                <input type="password" style="font-size: 15px;" id="confirm_password" name="confirm_password" placeholder="Retype Password"minlength="8" required>
-
-                        </div>
-                       <button type="submit">Sign Up</button><br><br>
+                    <center><h6><a href="{% url 'login'%}">have an account. Sign in</a></h6></center>
             
-                    
-
-                   
                 </form>
             </div>
         </div>

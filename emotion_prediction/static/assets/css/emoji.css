@@ -21,13 +21,18 @@ h1{
 form{
   margin-left: 100px;
 }
-
+#text::placeholder {
+	color:gray;
+    font-style: italic; 
+    position: relative; 
+    top: -70px; 
+}
 #text{
 	height: 250px;
 	width: 1300px;
 	left: 105px;
 	font-size: 22px;
-	margin-top: 20px;
+	margin-top: 5px;
 	font-family: sans-serif;
     box-sizing: border-box;
     border-radius: 20px;
@@ -919,4 +924,3 @@ margin-top: 25px;
    .paragraph_btn .active:focus {
     color: pink;
   }
-
