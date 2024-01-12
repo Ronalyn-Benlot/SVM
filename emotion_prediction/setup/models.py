@@ -41,6 +41,12 @@ class Story(models.Model):
 class AnalyzedStory(models.Model):
      user = models.ForeignKey(Users, on_delete=models.CASCADE)
      phrase = models.ForeignKey(Story, on_delete=models.CASCADE)
+     fear = models.FloatField(default=None, null=True, blank=True)
+     anger = models.FloatField(default=None, null=True, blank=True)
+     joy = models.FloatField(default=None, null=True, blank=True)
+     sadness = models.FloatField(default=None, null=True, blank=True)
+     disgust = models.FloatField(default=None, null=True, blank=True)
+     surprise = models.FloatField(default=None, null=True, blank=True)
      analyzed_emotion = models.ForeignKey(Emotion, on_delete=models.CASCADE)
      
      def __str__(self):

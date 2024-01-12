@@ -24,8 +24,8 @@ urlpatterns = [
     path('', views.home, name='home'),
 
     path('register', views.register, name='register'),
-    path('registerr', views.register_error, name='registerr'),
-    path('registersuccess', views.register_success, name='registersuccess'),
+    # path('registerr', views.register_error, name='registerr'),
+    # path('registersuccess', views.register_success, name='registersuccess'),
     
 
 
