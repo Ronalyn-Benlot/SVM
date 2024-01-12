@@ -7,6 +7,12 @@ from .models import AnalyzedStory
 from django.contrib.auth import authenticate, logout, login as auth_login,views as auth_views
 from django.contrib.auth.decorators import login_required
 
+# PDF DOWNLAOD
+from django.http import HttpResponse, HttpResponseServerError
+from django.template.loader import get_template
+import io
+import xhtml2pdf.pisa as pisa
+
 def home(request):
     return render(request, 'index.html')
 
@@ -165,3 +171,27 @@ def change(request):
 
     
     return render(request,'changepass.html')
+
+
+# download result
+def download_result(request):
+    logged_user = request.user.users  
+    user_stories = AnalyzedStory.objects.filter(user=logged_user).order_by('-id')
+    recent_user_story = user_stories.first()
+
+    context = {
+        'logged_user': logged_user,
+        'user_stories': user_stories,
+        'recent_user_story': recent_user_story
+    }
+
+    # Download as PDF
+    template = get_template('registration/pdf.html')
+    html = template.render(context)
+    pdf_file = io.BytesIO()
+    pisa.CreatePDF(html, dest=pdf_file, orientation='Portrait', pagesize='A4')
+    
+    # Create and return the PDF response
+    response = HttpResponse(pdf_file.getvalue(), content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="result.pdf"'
+    return response
