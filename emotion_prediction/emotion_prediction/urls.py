@@ -31,6 +31,7 @@ urlpatterns = [
 
     path('login', views.user_login, name='login'),
     path('loginerror', views.user_login_error, name='loginerror'),
+    path("logout", views.user_logout, name="logout"),
 
 
     path('per-paragraph', views.paragraph, name='paragraph'),

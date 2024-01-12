@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from .forms import Userform, StoryForm
 from .models import AnalyzedStory
-from django.contrib.auth import authenticate, login as auth_login,views as auth_views
+from django.contrib.auth import authenticate, logout, login as auth_login,views as auth_views
 from django.contrib.auth.decorators import login_required
 
 def home(request):
@@ -95,6 +95,11 @@ def user_login(request):
              return redirect(user_login_error)
 
     return render(request, 'logiin.html')
+
+
+def user_logout(request):
+    logout(request)
+    return redirect("home")
 
 
 def user_login_error(request):
