@@ -60,7 +60,10 @@
 	</form>
     <button type="submit1" name="paragraph" id="paragraph" class="paragraph_btn" >PARAGRAPH</button>
     <a href="{%url 'whole' %}"><button type="submit2" name="whole" id="whole" class="whole_btn">WHOLE</button></a>
-	<a href="{% url 'download-result' %}">Download Result</a>
+	{% if analyzed_story %}
+    	<a href="{% url 'download-result' %}">Download Result</a>
+	{% endif %}
+
 
     <!-- <button type="submit3" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button> -->
 
