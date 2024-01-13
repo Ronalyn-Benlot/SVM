@@ -52,7 +52,7 @@ form{
 	height: 40px;
 	width: 170px;
 	margin-left: 100px;
-    transform: translateY(-255%);
+    transform: translateY(-480%);
 }
 
 .whole_btn{
@@ -63,7 +63,7 @@ form{
 	height: 40px;
 	width: 170px;
 	margin-left: -30px;
-    transform: translateY(-255%);
+    transform: translateY(-480%);
 }
 
 .analyze_btn{
@@ -73,7 +73,7 @@ form{
 	font-size: 20px;
 	height: 40px;
 	width: 170px;
-	margin-left: 785px;
+	margin-left: 1130px;
     transform: translateY(-255%);
 }
 

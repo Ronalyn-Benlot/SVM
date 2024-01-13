@@ -2,8 +2,16 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth.models import User
-from .forms import Userform
-from django.contrib.auth import authenticate, login as auth_login,views as auth_views
+from .forms import Userform, StoryForm
+from .models import AnalyzedStory
+from django.contrib.auth import authenticate, logout, login as auth_login,views as auth_views
+from django.contrib.auth.decorators import login_required
+
+# PDF DOWNLAOD
+from django.http import HttpResponse, HttpResponseServerError
+from django.template.loader import get_template
+import io
+import xhtml2pdf.pisa as pisa
 
 def home(request):
     return render(request, 'index.html')
@@ -11,17 +19,27 @@ def home(request):
 
 def register(request):
     form = Userform
+    success = False
 
     if request.method == "POST":
         form = Userform(request.POST)
         if form.is_valid():
             form.save()
             messages.success(request, "Registration success!")
-            return redirect('login')
-    else:
-        messages.error(request, "Form is not valid")
+            success = True
+            # return redirect('login')
+        else:
+            messages.error(request, "Form is not valid")
+            success = False
     
-    context = {"form": form}
+    else:
+        form = Userform()
+    
+    context = {
+        "form": form, 
+        "success": success
+        }
+    
     return render(request, 'sign_up.html', context)    
     
     # if request.method == 'POST':
@@ -44,28 +62,28 @@ def register(request):
     # return render(request, 'sign_up.html')
 
 
-def register_error(request):
-    if request.method == 'POST':
-        first_name = request.POST['first_name']
-        last_name = request.POST['last_name']
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
-        confirm_password = request.POST['confirm_password']
+# def register_error(request):
+#     if request.method == 'POST':
+#         first_name = request.POST['first_name']
+#         last_name = request.POST['last_name']
+#         username = request.POST['username']
+#         email = request.POST['email']
+#         password = request.POST['password']
+#         confirm_password = request.POST['confirm_password']
 
-        # Check if passwords match
-        if password != confirm_password:
-            return redirect(register_error)
+#         # Check if passwords match
+#         if password != confirm_password:
+#             return redirect(register_error)
 
-        # Create a new user
-        my_user = User.objects.create_user(username=username,email=email, password=password, first_name=first_name, last_name=last_name)
+#         # Create a new user
+#         my_user = User.objects.create_user(username=username,email=email, password=password, first_name=first_name, last_name=last_name)
         
-        return redirect(register_success)
+#         return redirect(register_success)
   
-    return render(request, 'sign_up_error.html')
+#     return render(request, 'sign_up_error.html')
 
-def register_success(request):
-    return render(request, "success_reg.html")
+# def register_success(request):
+#     return render(request, "success_reg.html")
 
 
 
@@ -85,6 +103,11 @@ def user_login(request):
     return render(request, 'logiin.html')
 
 
+def user_logout(request):
+    logout(request)
+    return redirect("home")
+
+
 def user_login_error(request):
     if request.method == 'POST':
         username = request.POST['username']
@@ -101,54 +124,46 @@ def user_login_error(request):
 
 
 
-from django.contrib.auth.forms import PasswordResetForm
+# from django.contrib.auth.forms import PasswordResetForm
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@login_required(login_url='/login')
 def paragraph(request):
-    return render(request, 'emoji.html')
+    form = StoryForm()
+    success = False
 
+    recent_user_story = None  
+
+    if request.method == 'POST':
+        form = StoryForm(request.POST)
+        if form.is_valid():
+            form.save(request)
+            user_stories = AnalyzedStory.objects.filter(user=request.user.users).order_by('-id')
+            recent_user_story = user_stories.first()
+            success = True
+
+    context = {
+        'form': form, 
+        'analyzed_story': recent_user_story, 
+        "success": success
+        }
+    
+    return render(request, 'emoji.html', context)
+
+
+@login_required(login_url='/login')
 def whole(request):
     return render(request, 'emoji-whole.html')
 
+@login_required(login_url='/login')
 def profile(request):
-    user = request.user  # Replace this with your user retrieval logic
+    logged_user = request.user.users  
+    user_stories = AnalyzedStory.objects.filter(user=logged_user).order_by('-id')[:5] # 5 recent analyzed story of the logged in user
 
     context = {
-        'user': user,
+        'logged_user': logged_user,
+        'user_stories': user_stories
     }
-    return render(request, 'profile.html')
+    return render(request, 'profile.html', context)
 
 def change(request):
    
@@ -156,3 +171,27 @@ def change(request):
 
     
     return render(request,'changepass.html')
+
+
+# download result
+def download_result(request):
+    logged_user = request.user.users  
+    user_stories = AnalyzedStory.objects.filter(user=logged_user).order_by('-id')
+    recent_user_story = user_stories.first()
+
+    context = {
+        'logged_user': logged_user,
+        'user_stories': user_stories,
+        'recent_user_story': recent_user_story
+    }
+
+    # Download as PDF
+    template = get_template('registration/pdf.html')
+    html = template.render(context)
+    pdf_file = io.BytesIO()
+    pisa.CreatePDF(html, dest=pdf_file, orientation='Portrait', pagesize='A4')
+    
+    # Create and return the PDF response
+    response = HttpResponse(pdf_file.getvalue(), content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="result.pdf"'
+    return response

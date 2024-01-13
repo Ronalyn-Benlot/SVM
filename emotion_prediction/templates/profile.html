@@ -8,8 +8,7 @@
     <title>Profile Page</title>
     <!-- Font Awesome -->
     <link
-      rel="stylesheet"
-      href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css'%}"
+      rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <!-- CSS -->
     <link rel="stylesheet" href="{%static 'assets/css/profile.css' %}" />
@@ -42,7 +41,7 @@
 				</ul>
 				
 			   <ul>
-				  <li> <a href="{%url 'home' %}">Logout</a></li>
+				  <li> <a href="{%url 'logout' %}">Logout</a></li>
 				  
 				</ul>
 			  </div>
@@ -59,7 +58,7 @@
     <div class="left">
         <img src="{%static 'assets/img/user.jpeg' %}" alt="user" width="100">
         <h4>Name</h4>
-         <p>{{ user.first_name }} {{ user.last_name }}</p>
+         <p>{{ logged_user.first_name }} {{ logged_user.last_name }}</p>
     </div>
     <div class="right">
         <div class="info">
@@ -68,7 +67,7 @@
             <div class="info_data">
                  <div class="data">
                     <h4>Email</h4>
-                    <p>{{ user.email }}</p>
+                    <p>{{ logged_user.email }}</p>
                  </div>
                  
             </div>
@@ -79,10 +78,17 @@
             <div class="projects_data">
                  <div class="data">
                     <h4>Recent</h4>
-                      <p>1</p>
-					  <p>2</p>
-					  <p>3</p>
-					  <p>4</p>
+                    <ol>
+                      {% for phrases in user_stories %}
+                          <li>
+                              <p>{{ phrases.phrase }}</p>
+                              <p>{{ phrases.analyzed_emotion }}</p>
+                          </li>
+                      {% endfor %}
+                    </ol>
+                    <!-- <p>2</p>
+                    <p>3</p>
+                    <p>4</p> -->
                  </div>
                  
             </div>
