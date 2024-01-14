@@ -34,15 +34,14 @@
       <!-- Nav Menu -->
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{% url 'home' %}#hero" >Home</a></li>
+          <!-- <li><a href="{% url 'home' %}#hero" >Home</a></li>
           <li><a href="{% url 'home' %}#about">About</a></li>
           <li><a href="{% url 'home' %}#team">Team</a></li>
-          <li><a href="{% url 'home' %}#contact">Contact</a></li>
-		  <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a href="{% url 'home' %}#contact">Contact</a></li> -->
 		<li><a href="{% url 'profile' %}"><img src="{%static 'assets/img/proficon.png' %}"></a></li>
 
         </ul>
-      </nav><!-- End Nav Menu --> 
+      </nav>
       </div>
       <br>	
 	<h1>CHILDHOOD TALES EMOTION PREDICTOR</h1>
@@ -61,7 +60,7 @@
     <button type="submit1" name="paragraph" id="paragraph" class="paragraph_btn" >PARAGRAPH</button>
     <a href="{%url 'whole' %}"><button type="submit2" name="whole" id="whole" class="whole_btn">WHOLE</button></a>
 	{% if analyzed_story %}
-    	<a href="{% url 'download-result' %}">Download Result</a>
+    	<a href="{% url 'download-result' %}"><img src="{%static 'assets/img/dl.png' %}" style="height: 70px; margin-left: 20px; margin-bottom: -89px;"></a>
 	{% endif %}
 
 

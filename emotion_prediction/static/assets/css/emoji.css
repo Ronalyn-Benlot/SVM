@@ -1,5 +1,5 @@
 *{
-	background: rgb(0, 128, 128);
+	background : rgb(235, 172, 194);
 	font-family: Elephant;
 	font-weight: bold;
 	font-size: 70px;
@@ -10,16 +10,22 @@
 h1{
 	font-size: 40px;
 	text-align: center;
+	padding-top: 15px;
 	color: rgb(24, 22, 4);
 }
-
 .container{
 	position: fixed;
+	margin-left: 25px;
+	padding-top: 20px;
 }
 
 
 form{
   margin-left: 100px;
+}
+.fa-solid fa-file-arrow-down{
+	padding-top: 30px;
+	color: black;
 }
 #text::placeholder {
 	color:gray;
@@ -83,7 +89,7 @@ form{
 	color: white;
 	display: inline-block;
 	font-size: 15px;
-	margin-left: 215px;
+	margin-left: -336px;
 	justify-content: center;
     transform: translateY(-730%);
 }
@@ -101,7 +107,7 @@ form{
 	color: white;
 	display: inline-block;
 	font-size: 15px;
-	margin-left: 135px;
+	margin-left: 138px;
 	justify-content: center;
     transform: translateY(-725%);
 }
@@ -138,6 +144,7 @@ form{
 	height: 100px;
 	width: 100px;
 	margin-left: 190px;
+	margin-top: -400px;
     transform: translateY(-160%);
 }
 
@@ -186,7 +193,7 @@ form{
 	color: white;
 	display: inline-block;
 	font-size: 15px;
-	margin-left: 236px;
+	margin-left: 210px;
     transform: translateY(-1110%);
 }
 
@@ -194,7 +201,7 @@ form{
 	color: white;
 	display: inline-block;
 	font-size: 15px;
-	margin-left: 170px;
+	margin-left: 145px;
     transform: translateY(-1110%);
 }
 
@@ -202,7 +209,7 @@ form{
 	color: white;
 	display: inline-block;
 	font-size: 15px;
-	margin-left: 165px;
+	margin-left: 132px;
     transform: translateY(-1110%);
 }
 
@@ -210,7 +217,7 @@ form{
 	color: white;
 	display: inline-block;
 	font-size: 15px;
-	margin-left: 165px;
+	margin-left: 134px;
     transform: translateY(-1110%);
 }
 
@@ -218,7 +225,7 @@ form{
 	color: white;
 	display: inline-block;
 	font-size: 15px;
-	margin-left: 145px;
+	margin-left: 117px;
     transform: translateY(-1110%);
 }
 
@@ -226,7 +233,7 @@ form{
 	color: white;
 	display: inline-block;
 	font-size: 15px;
-	margin-left: 150px;
+	margin-left: 115px;
     transform: translateY(-1110%);
 }
 
