@@ -32,7 +32,7 @@
           <li><a href="{% url 'home' %}">About</a></li>
           <li><a href="{% url 'home' %}">Team</a></li>
           <li><a href="{% url 'home' %}#contact">Contact</a></li>
-		  <li><a href="{% url 'login' %}">Login</a></li>
+		  <!-- <li><a href="{% url 'login' %}">Login</a></li> -->
 			<span><li><a href="{%url 'profile' %}"><img src="{%static 'assets/img/proficon.png' %}"></a></span>
 			<div class="sub-menu">
 			  <ul>
@@ -79,7 +79,7 @@
                  <div class="data">
                     <h4>Recent</h4>
                     <ol>
-                      {% for phrases in user_stories %}
+                      {% for phrases in user_stories|slice:":5" %}
                           <li>
                               <p>{{ phrases.phrase }}</p>
                               <p>{{ phrases.analyzed_emotion }}</p>

@@ -172,6 +172,42 @@ def change(request):
     
     return render(request,'changepass.html')
 
+@login_required(login_url='/login')
+def whole(request):
+    form = StoryForm()
+    success = False
+    recent_user_story = None
+    content = None
+
+    if request.method == 'POST':
+        form = StoryForm(request.POST, request.FILES)
+
+        uploaded_file = request.FILES.get('file')
+        
+        if uploaded_file:
+            file_content = uploaded_file.read().decode('utf-8')
+            content = file_content
+            form.data = form.data.copy()
+            form.data['story'] = file_content # store the decoded story from the uploaded file to story field
+            print(content)
+
+        if form.is_valid():
+            form.save(request)
+            success = True
+            user_stories = AnalyzedStory.objects.filter(user=request.user.users).order_by('-id')
+            recent_user_story = user_stories.first()
+        else:
+            print("Form is not valid:", form.errors)
+
+    context = {
+        'form': form,
+        'analyzed_story': recent_user_story,
+        'success': success,
+        'content': content, 
+    }
+
+    return render(request, 'emoji-whole.html', context)
+
 
 # download result
 def download_result(request):

@@ -1,139 +1,139 @@
-{% load static %}
-<!Doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{%static 'assets/css/emoji.css' %}">
-  <title>EMOJ-I-ON</title>
-  <style>
-	/* Style for the normal state of the button */
-	.paragraph_btn {
+	{% load static %}
+	<!Doctype html>
+	<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="{%static 'assets/css/emoji.css' %}">
+	<title>EMOJ-I-ON</title>
+	<style>
+		/* Style for the normal state of the button */
+		.paragraph_btn {
+			
+			text-decoration: none;
+			background-color:#0a0303;
+			color: #ffffff;
+			cursor: pointer;
+		}
+
+		/* Style for the active state of the button */
+		.paragraph_btn.active {
+			background-color: black;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="top">
+		<header id="header" class="header fixed-top d-flex align-items-center">
+		<div class="container-fluid d-flex align-items-center justify-content-between">
+
+		<a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
+			<img src="{% static 'assets/img/icon.png' %}">
+		</a>
+		<center><h3>Emoj-i-on</h3></center>
+		<!-- Nav Menu -->
+		<nav id="navmenu" class="navmenu">
+			<ul>
+			<!-- <li><a href="{% url 'home' %}#hero" >Home</a></li>
+			<li><a href="{% url 'home' %}#about">About</a></li>
+			<li><a href="{% url 'home' %}#team">Team</a></li>
+			<li><a href="{% url 'home' %}#contact">Contact</a></li> -->
+			<li><a href="{% url 'profile' %}"><img src="{%static 'assets/img/proficon.png' %}" title="Profile"></a></li>
+
+			</ul>
+		</nav>
+		</div>
+		<br>	
+		<h1>CHILDHOOD TALES EMOTION PREDICTOR</h1>
 		
-		text-decoration: none;
-		background-color:#0a0303;
-		color: #ffffff;
-		cursor: pointer;
-	}
+	<div class="container">
 
-	/* Style for the active state of the button */
-	.paragraph_btn.active {
-		background-color: black;
-	}
-</style>
-</head>
-<body>
-	<div class="top">
-	<header id="header" class="header fixed-top d-flex align-items-center">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+		<!-- <form>
+			<input id="text" type="text" name="" placeholder="Enter text here...">
+		</form>   -->
 
-      <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
-		<img src="{% static 'assets/img/icon.png' %}">
-      </a>
-      <center><h3>Emoj-i-on</h3></center>
-      <!-- Nav Menu -->
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <!-- <li><a href="{% url 'home' %}#hero" >Home</a></li>
-          <li><a href="{% url 'home' %}#about">About</a></li>
-          <li><a href="{% url 'home' %}#team">Team</a></li>
-          <li><a href="{% url 'home' %}#contact">Contact</a></li> -->
-		<li><a href="{% url 'profile' %}"><img src="{%static 'assets/img/proficon.png' %}"></a></li>
-
-        </ul>
-      </nav>
-      </div>
-      <br>	
-	<h1>CHILDHOOD TALES EMOTION PREDICTOR</h1>
-	
-<div class="container">
-
-	<!-- <form>
-        <input id="text" type="text" name="" placeholder="Enter text here...">
-    </form>   -->
-
-	<form method="post" action="{% url 'paragraph' %}">
-		{% csrf_token %}
-		{{ form.story }}
-		<button type="submit" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button>
-	</form>
-    <button type="submit1" name="paragraph" id="paragraph" class="paragraph_btn" >PARAGRAPH</button>
-    <a href="{%url 'whole' %}"><button type="submit2" name="whole" id="whole" class="whole_btn">WHOLE</button></a>
-	{% if analyzed_story %}
-    	<a href="{% url 'download-result' %}"><img src="{%static 'assets/img/dl.png' %}" style="height: 70px; margin-left: 20px; margin-bottom: -89px;"></a>
-	{% endif %}
+		<form method="post" action="{% url 'paragraph' %}">
+			{% csrf_token %}
+			{{ form.story }}
+			<button type="submit" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button>
+		</form>
+		<button type="submit1" name="paragraph" id="paragraph" class="paragraph_btn" >PARAGRAPH</button>
+		<a href="{%url 'whole' %}"><button type="submit2" name="whole" id="whole" class="whole_btn">WHOLE</button></a>
+		{% if analyzed_story %}
+			<a href="{% url 'download-result' %}"><img src="{%static 'assets/img/dl.png' %}" title="Download PDF" style="height: 70px; margin-left: 20px; margin-bottom: -89px;"></a>
+		{% endif %}
 
 
-    <!-- <button type="submit3" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button> -->
+		<!-- <button type="submit3" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button> -->
 
 
-	<h6 class="fear">FEAR</h6>
+		<h6 class="fear">FEAR</h6>
 
-	<h6 class="anger">ANGER</h6>
+		<h6 class="anger">ANGER</h6>
 
-	<h6 class="joy">JOY</h6>
+		<h6 class="joy">JOY</h6>
 
-	<h6 class="sadness">SADNESS</h6>
+		<h6 class="sadness">SADNESS</h6>
 
-	<h6 class="disgust">DISGUST</h6>
+		<h6 class="disgust">DISGUST</h6>
 
-	<h6 class="surprise">SUPRISE</h6>
+		<h6 class="surprise">SUPRISE</h6>
+		<br>
+
+		<img class="img1" src="{%static 'assets/img/fear.png' %}">
+
+		<img class="img2" src="{%static 'assets/img/angry.png' %}">
+
+		<img class="img3" src="{%static 'assets/img/happy.png' %}">
+
+		<img class="img4" src="{%static 'assets/img/sad.png' %}">
+
+		<img class="img5" src="{%static 'assets/img/disgust.png' %}">
+
+		<img class="img6" src="{%static 'assets/img/surprise.png' %}">
+		<br>
+		{%if success %}
+			<p class="p1">{{ analyzed_story.fear }}%</p>
+
+			<p class="p2">{{ analyzed_story.anger }}%</p>
+
+			<p class="p3">{{ analyzed_story.joy }}%</p>
+
+			<p class="p4">{{ analyzed_story.sadness }}%</p>
+
+			<p class="p5">{{ analyzed_story.disgust }}%</p>
+
+			<p class="p6">{{ analyzed_story.surprise }}%</p>
+		{% else %}
+			<p class="p1">0%</p>
+
+			<p class="p2">0%</p>
+
+			<p class="p3">0%</p>
+
+			<p class="p4">0%</p>
+
+			<p class="p5">0%</p>
+
+			<p class="p6">0%</p>
+		{% endif %}
 	<br>
+	<p class="emotion">Emotion Predicted: {{ analyzed_story.analyzed_emotion }}</p>
+	</div>
 
-	<img class="img1" src="{%static 'assets/img/fear.png' %}">
+	<script>
+		// JavaScript function to toggle the active state of the buttons
+		function toggleButton(button) {
+			// Remove active class from all buttons
+			var buttons = document.querySelectorAll('.my-button');
+			buttons.forEach(function(btn) {
+				btn.classList.remove('active');
+			});
 
-	<img class="img2" src="{%static 'assets/img/angry.png' %}">
-
-	<img class="img3" src="{%static 'assets/img/happy.png' %}">
-
-	<img class="img4" src="{%static 'assets/img/sad.png' %}">
-
-	<img class="img5" src="{%static 'assets/img/disgust.png' %}">
-
-	<img class="img6" src="{%static 'assets/img/surprise.png' %}">
-	<br>
-	{%if success %}
-		<p class="p1">{{ analyzed_story.fear }}%</p>
-
-		<p class="p2">{{ analyzed_story.anger }}%</p>
-
-		<p class="p3">{{ analyzed_story.joy }}%</p>
-
-		<p class="p4">{{ analyzed_story.sadness }}%</p>
-
-		<p class="p5">{{ analyzed_story.disgust }}%</p>
-
-		<p class="p6">{{ analyzed_story.surprise }}%</p>
-	{% else %}
-		<p class="p1">0%</p>
-
-		<p class="p2">0%</p>
-
-		<p class="p3">0%</p>
-
-		<p class="p4">0%</p>
-
-		<p class="p5">0%</p>
-
-		<p class="p6">0%</p>
-	{% endif %}
-<br>
-<p class="emotion">Emotion Predicted: {{ analyzed_story.analyzed_emotion }}</p>
-</div>
-
-<script>
-	// JavaScript function to toggle the active state of the buttons
-	function toggleButton(button) {
-		// Remove active class from all buttons
-		var buttons = document.querySelectorAll('.my-button');
-		buttons.forEach(function(btn) {
-			btn.classList.remove('active');
-		});
-
-		// Add active class to the clicked button
-		button.classList.add('active');
-	}
-</script>
-</body>
-</html>
+			// Add active class to the clicked button
+			button.classList.add('active');
+		}
+	</script>
+	</body>
+	</html>
 

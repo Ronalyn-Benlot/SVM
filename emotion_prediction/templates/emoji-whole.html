@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{%static 'assets/css/emoji.css'%}">
+  <link rel="stylesheet" href="{%static 'assets/css/emoji-whole.css'%}">
   <title>EMOJ-I-ON</title>
   <style>
 	/* Style for the normal state of the button */
@@ -34,12 +34,12 @@
       <!-- Nav Menu -->
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{% url 'home' %}#hero" >Home</a></li>
+          <!-- <li><a href="{% url 'home' %}#hero" >Home</a></li>
           <li><a href="{% url 'home' %}#about">About</a></li>
           <li><a href="{% url 'home' %}#team">Team</a></li>
           <li><a href="{% url 'home' %}#contact">Contact</a></li>
-		  <li><a href="{% url 'login' %}">Login</a></li>
-		<li><a href="{% url 'profile' %}"><img src="{% static 'assets/img/proficon.png' %}"></a></li>
+		  <li><a href="{% url 'login' %}">Login</a></li> -->
+		<li><a href="{% url 'profile' %}"><img src="{% static 'assets/img/proficon.png' %}"  title="Profile"></a></li>
 
         </ul>
       </nav><!-- End Nav Menu --> 
@@ -47,55 +47,75 @@
       <br>	
 	<h1>CHILDHOOD TALES EMOTION PREDICTOR</h1>
 	
-<div class="container">
-
-	<form>
-        <input id="text" type="text" name="" placeholder="Upload your file here...">
-    </form>  
-    <a href="{%url 'paragraph' %}"><button type="submit1" name="paragraph" id="paragraph" class="paragraph_btn">PARAGRAPH</button></a>
-    <button type="submit2" name="whole" id="whole" class="whole_btn">WHOLE</button>
-    <button type="submit3" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button>
-
-
-	<h6 class="fear">FEAR</h6>
-
-	<h6 class="anger">ANGER</h6>
-
-	<h6 class="joy">JOY</h6>
-
-	<h6 class="sadness">SADNESS</h6>
-
-	<h6 class="disgust">DISGUST</h6>
-
-	<h6 class="surprise">SUPRISE</h6>
-	<br>
-
-	<img class="img1" src="{%static 'assets/img/fear.png' %}">
-
-	<img class="img2" src="{%static 'assets/img/angry.png' %}">
-
-	<img class="img3" src="{%static 'assets/img/happy.png' %}">
-
-	<img class="img4" src="{%static 'assets/img/sad.png' %}">
-
-	<img class="img5" src="{%static 'assets/img/disgust.png' %}">
-
-	<img class="img6" src="{%static 'assets/img/surprise.png' %}">
-	<br>
-	<p class="p1">0%</p>
-
-	<p class="p2">0%</p>
-
-	<p class="p3">0%</p>
-
-	<p class="p4">0%</p>
-
-	<p class="p5">0%</p>
-
-	<p class="p6">0%</p>
-<br>
-<p class="emotion">Emotion Predicted:</p>
-</div>
+	<div class="container">
+		<form method="post" enctype="multipart/form-data" action="{% url 'whole' %}">
+			{% csrf_token %}
+		
+				<input id="text" type="file" name="file" accept=".txt" placeholder="Upload your file here...">
+		
+			
+			<button type="submit" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button>
+		</form>  
+		<a href="{%url 'paragraph' %}"><button type="submit1" name="paragraph" id="paragraph" class="paragraph_btn">PARAGRAPH</button></a>
+		<button type="submit2" name="whole" id="whole" class="whole_btn">WHOLE</button>
+		{% if analyzed_story %}
+			<a href="{% url 'download-result' %}"><img src="{%static 'assets/img/dl.png' %}" title="Download PDF" style="height: 70px; margin-left: 20px; margin-bottom: -89px;"></a>
+		{% endif %}
+	
+	
+		<h6 class="fear">FEAR</h6>
+	
+		<h6 class="anger">ANGER</h6>
+	
+		<h6 class="joy">JOY</h6>
+	
+		<h6 class="sadness">SADNESS</h6>
+	
+		<h6 class="disgust">DISGUST</h6>
+	
+		<h6 class="surprise">SUPRISE</h6>
+		<br>
+	
+		<img class="img1" src="{%static 'assets/img/fear.png' %}">
+	
+		<img class="img2" src="{%static 'assets/img/angry.png' %}">
+	
+		<img class="img3" src="{%static 'assets/img/happy.png' %}">
+	
+		<img class="img4" src="{%static 'assets/img/sad.png' %}">
+	
+		<img class="img5" src="{%static 'assets/img/disgust.png' %}">
+	
+		<img class="img6" src="{%static 'assets/img/surprise.png' %}">
+		<br>
+		{%if success %}
+			<p class="p1">{{ analyzed_story.fear }}%</p>
+	
+			<p class="p2">{{ analyzed_story.anger }}%</p>
+	
+			<p class="p3">{{ analyzed_story.joy }}%</p>
+	
+			<p class="p4">{{ analyzed_story.sadness }}%</p>
+	
+			<p class="p5">{{ analyzed_story.disgust }}%</p>
+	
+			<p class="p6">{{ analyzed_story.surprise }}%</p>
+		{% else %}
+			<p class="p1">0%</p>
+	
+			<p class="p2">0%</p>
+	
+			<p class="p3">0%</p>
+	
+			<p class="p4">0%</p>
+	
+			<p class="p5">0%</p>
+	
+			<p class="p6">0%</p>
+		{% endif %}
+		<br>
+		<p class="emotion">Emotion Predicted: {{ analyzed_story.analyzed_emotion }}</p>
+	</div>
 <script>
 	// JavaScript function to toggle the active state of the buttons
 	function toggleButton(button) {
