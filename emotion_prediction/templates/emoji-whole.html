@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{%static 'assets/css/emoji-whole.css'%}">
+  <link rel="stylesheet" href="{%static 'assets/css/emoji.css'%}">
   <title>EMOJ-I-ON</title>
   <style>
 	/* Style for the normal state of the button */
@@ -20,9 +20,28 @@
 	.whole_btn.active {
 		background-color: black;
 	}
+
+	h1{
+		padding-bottom: -100px;
+	}
+	.emoji{
+			padding-top: 500px;
+			justify-content: center;
+		}
+
+	.word{
+		padding-left: 550px;
+	}
+	h1{
+		
+		padding-bottom: -30px;
+		color: black;
+	}
+		
 </style>
 </head>
-<body>
+<body background="{%static 'assets/img/paper.jpg' %}">
+<!-- style=" background: linear-gradient(to bottom , pink,#feff79,#d2ff9d,	#b2d7df);background-size: 100% 100vh;"> -->
 	<div class="top">
 	<header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -30,24 +49,24 @@
       <a href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
 		<img src="{%static 'assets/img/icon.png' %}">
       </a>
-      <center><h3>Emoj-i-on</h3></center>
+      <center><h3>Emotion-On</h3></center>
       <!-- Nav Menu -->
       <nav id="navmenu" class="navmenu">
         <ul>
-          <!-- <li><a href="{% url 'home' %}#hero" >Home</a></li>
+          <li><a href="{% url 'home' %}#hero" >Home</a></li>
           <li><a href="{% url 'home' %}#about">About</a></li>
           <li><a href="{% url 'home' %}#team">Team</a></li>
           <li><a href="{% url 'home' %}#contact">Contact</a></li>
-		  <li><a href="{% url 'login' %}">Login</a></li> -->
-		<li><a href="{% url 'profile' %}"><img src="{% static 'assets/img/proficon.png' %}"  title="Profile"></a></li>
+		  <!-- <li><a href="{% url 'login' %}">Login</a></li> -->
+		<li><a href="{% url 'profile' %}"><img src="{% static 'assets/img/user.png' %}"  title="Profile"></a></li>
 
         </ul>
       </nav><!-- End Nav Menu --> 
       </div>
       <br>	
-	<h1>CHILDHOOD TALES EMOTION PREDICTOR</h1>
 	
 	<div class="container">
+		<h1>CHILDHOOD TALES EMOTION PREDICTOR</h1>
 		<form method="post" enctype="multipart/form-data" action="{% url 'whole' %}">
 			{% csrf_token %}
 		
@@ -59,61 +78,68 @@
 		<a href="{%url 'paragraph' %}"><button type="submit1" name="paragraph" id="paragraph" class="paragraph_btn">PARAGRAPH</button></a>
 		<button type="submit2" name="whole" id="whole" class="whole_btn">WHOLE</button>
 		{% if analyzed_story %}
-			<a href="{% url 'download-result' %}"><img src="{%static 'assets/img/dl.png' %}" title="Download PDF" style="height: 70px; margin-left: 20px; margin-bottom: -89px;"></a>
+			<a href="{% url 'download-result' %}"><button class="cssbuttons-io-button" style="height: 10px; padding-left: -30px;">
+				<svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"></path><path d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z" fill="currentColor"></path></svg>
+				<span style="font-size: small;">Download</span>
+			  </button></a>
 		{% endif %}
 	
+	</div>
+	<div class="emoji">
+		<div class="word">
+			<h6 class="fear" style="padding-left: 15px; color: #0a0303;">FEAR</h6>
+
+			<h6 class="anger" style="color: #0a0303;">ANGER</h6>
 	
-		<h6 class="fear">FEAR</h6>
+			<h6 class="joy" style="color: #0a0303;">JOY</h6>
 	
-		<h6 class="anger">ANGER</h6>
+			<h6 class="sadness" style="color: #0a0303;">SADNESS</h6>
 	
-		<h6 class="joy">JOY</h6>
+			<h6 class="disgust" style="color: #0a0303;">DISGUST</h6>
 	
-		<h6 class="sadness">SADNESS</h6>
-	
-		<h6 class="disgust">DISGUST</h6>
-	
-		<h6 class="surprise">SUPRISE</h6>
+			<h6 class="surprise" style="color: #0a0303;">SUPRISE</h6>
 		<br>
-	
-		<img class="img1" src="{%static 'assets/img/fear.png' %}">
-	
+		</div>
+		<img class="img1" src="{%static 'assets/img/fear.png' %}" style="padding-left: 20px;">
+
 		<img class="img2" src="{%static 'assets/img/angry.png' %}">
-	
+
 		<img class="img3" src="{%static 'assets/img/happy.png' %}">
-	
+
 		<img class="img4" src="{%static 'assets/img/sad.png' %}">
-	
+
 		<img class="img5" src="{%static 'assets/img/disgust.png' %}">
-	
+
 		<img class="img6" src="{%static 'assets/img/surprise.png' %}">
 		<br>
 		{%if success %}
+		<div class="percent" style="padding-left: 20px;">
 			<p class="p1">{{ analyzed_story.fear }}%</p>
-	
+
 			<p class="p2">{{ analyzed_story.anger }}%</p>
-	
+
 			<p class="p3">{{ analyzed_story.joy }}%</p>
-	
+
 			<p class="p4">{{ analyzed_story.sadness }}%</p>
-	
+
 			<p class="p5">{{ analyzed_story.disgust }}%</p>
-	
+
 			<p class="p6">{{ analyzed_story.surprise }}%</p>
 		{% else %}
-			<p class="p1">0%</p>
-	
-			<p class="p2">0%</p>
-	
-			<p class="p3">0%</p>
-	
-			<p class="p4">0%</p>
-	
-			<p class="p5">0%</p>
-	
-			<p class="p6">0%</p>
-		{% endif %}
-		<br>
+	</div>
+	<p class="p1" style="padding-left: 33px; color: #0a0303;" >0%</p>
+
+	<p class="p2" style="padding-left: 33px; color: #0a0303;">0%</p>
+
+	<p class="p3" style="padding-left: 30px; color: #0a0303;">0%</p>
+
+	<p class="p4" style="padding-left: 34px; color: #0a0303;">0%</p>
+
+	<p class="p5" style="padding-left: 33px; color: #0a0303;">0%</p>
+
+	<p class="p6" style="padding-left: 28px; color: #0a0303;" >0%</p>
+{% endif %}
+	<br>
 		<p class="emotion">Emotion Predicted: {{ analyzed_story.analyzed_emotion }}</p>
 	</div>
 <script>

@@ -1,5 +1,5 @@
 *{
-	background : rgb(235, 172, 194);
+	
 	font-family: Elephant;
 	font-weight: bold;
 	font-size: 70px;
@@ -10,15 +10,18 @@
 h1{
 	font-size: 40px;
 	text-align: center;
-	padding-top: 15px;
+	padding-top: 10px;
 	color: rgb(24, 22, 4);
+	padding-bottom: 10px;
 }
 .container{
 	position: fixed;
 	margin-left: 25px;
 	padding-top: 10px;
 }
-
+title{
+	size:20px;
+}
 
 form{
   margin-left: 100px;
@@ -32,6 +35,7 @@ form{
     font-style: italic; 
     position: relative; 
     top: -70px; 
+	padding-left: 20px;
 }
 #text{
 	height: 250px;
@@ -48,10 +52,33 @@ form{
 
 }
 
-
+.cssbuttons-io-button {
+	display: flex;
+	align-items: center;
+	font-family: inherit;
+	font-weight: 500;
+	font-size: 17px;
+	padding: 0.8em 1.5em 0.8em 1.2em;
+	color: white;
+	background: #eb9069;
+	letter-spacing: 0.05em;
+	border-radius: 20em;
+	margin-left: 500px;
+  }
+  
+  .cssbuttons-io-button svg {
+	margin-right: 8px;
+  }
+  
+  .cssbuttons-io-button:hover {
+	box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+  }
+  
+  .cssbuttons-io-button:active {
+	box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+  }
 .paragraph_btn{
 	background-color: #fff;
-	
 	border-radius: 10px;
 	border: 3px solid black;
 	font-size: 20px;
@@ -70,6 +97,7 @@ form{
 	width: 170px;
 	margin-left: -30px;
     transform: translateY(-480%);
+	margin-left: -13px;
 }
 
 .analyze_btn{
@@ -336,7 +364,7 @@ form{
 	}
 	.fear{
 		font-size: 12px;
-		margin-left: 195px;
+		margin-left: 250px;
 		transform: translateY(-150px);
 	}
 
@@ -478,7 +506,7 @@ form{
 	}
 
 	.fear{
-		margin-left: 75px;
+		margin-left: 100px;
 	}
 
 	.img1{
@@ -706,7 +734,7 @@ form{
 
 		.surprise{
 			font-size: 10px;
-			margin-left: 20px;
+			margin-left: 30px;
 		}
 
 		.img1{
@@ -746,7 +774,7 @@ form{
 
 		.p1{
 			font-size: 10px;
-			margin-left: 45px;
+			margin-left: px;
 		}
 
 		.p2{
@@ -772,6 +800,7 @@ form{
 		.p6{
 			font-size: 10px;
 			margin-left: 60px;
+			padding-left: -50px;
 		}
 
 		.emotion{
@@ -791,12 +820,12 @@ form{
 /*header*/
 
 .top{
-	margin: 10px 0px 10px;
+	margin: 5px 0px 10px;
 }
 
 
 .top header{
-		background-color: white;
+		background-color:#fff;
 		transition: all 0.5s;
 		z-index: 997;
 		height: 100px;
@@ -804,25 +833,23 @@ form{
 		margin-top: -32px;
 		position: fixed;
 		margin-left: -10px;
-		
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 
 .top h3{
- font-size: 25px;
- font-family: Maiden Orange;
- background-color: white;
+ font-size: 40px;
+ font-family: Palace Script MT;
 color: black;
  position: absolute;
-margin-left: 130px;
-padding-top:30px;
+margin-left: 135px;
+padding-top:20px;
 margin-top: 25px;
 }
 .top .logo img {
   max-height: 80px;
   margin-left: 50px;
 	position: absolute;
-	background-color: white;
 	padding-top: 20px;
 	
 }
@@ -853,18 +880,19 @@ margin-top: 25px;
 	  float: right;
 	  margin-right: 30px;
 	  padding-top: 25px;
-	  background-color: white;
+	  background-color: rgba(255, 255, 255, 0);
   }
 	.navmenu ul img{
 		height: 30px;
 		width: auto;
 		margin-left: 30px;
-		background-color: white;
+		
 	}
 
   .navmenu li {
     position: relative;
-	margin-left: 20px;
+	margin-top: -2px;
+	
   }
 
   .navmenu a,
@@ -879,7 +907,7 @@ margin-top: 25px;
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
-    background-color: white;
+    
   }
 
   .navmenu a i,
@@ -904,7 +932,7 @@ margin-top: 25px;
 
  .paragraph_btn a,
 .paragraph_btn a:focus {
-    color: var(--nav-color);
+    color: #FFC5C5;
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
@@ -916,20 +944,3 @@ margin-top: 25px;
     transition: 0.3s;
   }
 
- .paragraph_btn a i,
- .paragraph_btn a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
-  }
-
- .paragraph_btn li:last-child a {
-    padding-right: 0;
-  }
-
-   .paragraph_btn li:hover>a,
-   .paragraph_btn .active,
-   .paragraph_btn .active:focus {
-    color: pink;
-  }

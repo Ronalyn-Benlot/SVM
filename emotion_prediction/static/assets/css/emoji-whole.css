@@ -1,5 +1,5 @@
 *{
-	background : rgb(235, 172, 194);
+	background-image: url(static/img/);
 	font-family: Elephant;
 	font-weight: bold;
 	font-size: 70px;
@@ -32,6 +32,7 @@ form{
     font-style: italic; 
     position: relative; 
     top: -70px; 
+	padding-left: 20px;
 }
 #text{
 	height: 250px;
@@ -805,11 +806,12 @@ form{
 		position: fixed;
 		margin-left: -10px;
 		
+		
 }
 
 
 .top h3{
- font-size: 25px;
+ font-size: 40px;
  font-family: Maiden Orange;
  background-color: white;
 color: black;
@@ -863,6 +865,7 @@ margin-top: 25px;
 
   .navmenu li {
     position: relative;
+	margin-top: -6px;
   }
 
   .navmenu a,
