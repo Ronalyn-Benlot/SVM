@@ -1,0 +1,19 @@
+{% if user_stories.has_other_pages %}
+    <div class="pagination">
+        <span class="step-links">
+            {% if user_stories.has_previous %}
+                <a href="?page=1">&laquo; first</a>
+                <a href="?page={{ user_stories.previous_page_number }}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ user_stories.number }} of {{ user_stories.paginator.num_pages }}.
+            </span>
+
+            {% if user_stories.has_next %}
+                <a href="?page={{ user_stories.next_page_number }}">next</a>
+                <a href="?page={{ user_stories.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+{% endif %}

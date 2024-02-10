@@ -12,7 +12,11 @@
 }
 
 body{
-   background-color: #f3f3f3;
+   background-image: radial-gradient(rgba(247, 242, 242, 0.75),rgba(245, 239, 239, 0.75)),url(../../img/6.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+   
 }
 
 .sub-menu {
@@ -35,20 +39,22 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 700px;
-  height: auto;
+  width: 1100px;
+  height: 70vh;
   display: flex;
   box-shadow: 0 1px 20px 0 rgba(69,90,100,.08);
 }
 
 .wrapper .left{
+  background-image: url(../../img/bder2.png);
+  background-repeat: no-repeat;
+  background-size:cover;
   width: 35%;
-  background: linear-gradient(to right,#01a9ac,#01dbdf);
   padding: 30px 25px;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   text-align: center;
-  color: #fff;
+  
 }
 
 .wrapper .left img{
@@ -61,12 +67,13 @@ body{
 }
 
 .wrapper .left p{
-  font-size: 12px;
+  font-size: 15px;
 }
 
 .wrapper .right{
   width: 100%;
-  background: #fff;
+  background-image: radial-gradient(rgba(233, 228, 228, 0.75),rgba(253, 253, 253, 0.75)),url(../../img/bgg.jpg);
+  background-size: cover;
   padding: 30px 25px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -95,7 +102,7 @@ body{
 
 .wrapper .right .info_data .data,
 .wrapper .right .projects_data .data{
-  width: 45%;
+  width: 120%;
 }
 
 .wrapper .right .info_data .data h4,
@@ -106,9 +113,9 @@ body{
 
 .wrapper .right .info_data .data p,
 .wrapper .right .projects_data .data p{
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 10px;
-  color: #919aa3;
+  color: #000000;
 }
 
 .wrapper .social_media ul{
@@ -221,3 +228,52 @@ position: absolute;
   }
 
 }	
+.pagination{
+  margin-top: 30px;
+  margin-left: 140px;
+}
+
+.optionA {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-left: 55px;
+  background-color: #86c8f1;
+  border-radius: 5px;
+  width: 130px;
+  height: 4vh;
+  margin-top:20px;
+  
+ 
+}
+.optionA a{
+  color: black;
+}
+.optionA:hover{
+  
+  background-color: rgb(201, 201, 241);
+}
+
+
+
+.optionB {
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-left: 70px;
+  background-color: #86c8f1;
+  border-radius: 5px;
+  width: 100px;
+  height: 4vh;
+  margin-top:20px;
+  
+}
+.optionB a{
+  
+  color: black;
+}
+.optionB:hover{
+  background-color: rgb(201, 201, 241);
+}

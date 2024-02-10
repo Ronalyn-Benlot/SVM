@@ -12,6 +12,7 @@ from django.http import HttpResponse, HttpResponseServerError
 from django.template.loader import get_template
 import io
 import xhtml2pdf.pisa as pisa
+from django.core.paginator import Paginator
 
 def home(request):
     return render(request, 'index.html')
@@ -151,17 +152,18 @@ def paragraph(request):
 
 
 @login_required(login_url='/login')
-def whole(request):
-    return render(request, 'emoji-whole.html')
-
-@login_required(login_url='/login')
 def profile(request):
     logged_user = request.user.users  
-    user_stories = AnalyzedStory.objects.filter(user=logged_user).order_by('-id')[:5] # 5 recent analyzed story of the logged in user
+    user_stories = AnalyzedStory.objects.filter(user=logged_user).order_by('-id')
+
+    # Paginate the user stories
+    paginator = Paginator(user_stories, 7)  
+    page_number = request.GET.get('page')
+    user_stories_paginated = paginator.get_page(page_number)
 
     context = {
         'logged_user': logged_user,
-        'user_stories': user_stories
+        'user_stories': user_stories_paginated
     }
     return render(request, 'profile.html', context)
 
