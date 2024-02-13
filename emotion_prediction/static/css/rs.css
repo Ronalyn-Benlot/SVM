@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+   
     
 }
 
@@ -98,7 +99,8 @@ button {
 } */
 
 h3{
-    font-family: palace script mt;
+   
     font-size: 40px;
-    color: black;
+    color: rgb(5, 5, 5);
+    font-family: Palace Script MT;
 }

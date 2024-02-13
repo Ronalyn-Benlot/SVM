@@ -7,7 +7,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
       
-        <title>Home - Append Bootstrap Temlate</title>
+        <title>login</title>
         <meta content="" name="description">
         <meta content="" name="keywords">
       
@@ -39,7 +39,7 @@
           <div class="container-fluid d-flex align-items-center justify-content-between">
             <a style=" align-items: start;" href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
               <img src="{% static 'assets/img/icon.png' %}">
-                  <h3><b>Emotion-On</b></h3>
+                  <h3><b> Emotion-On</b></h3>
                  
                 </a>
           
@@ -70,22 +70,22 @@
 
                   
                         <div class="inputbox">
-                            <label for="username">Username</label>
+                            <label for="username" style="font-family: Book Antiqua;">Username</label>
                             <br><br>
                             <input type="text"  style="font-size: 20px;"id="username" name="username" required>
 
                         </div>
                         
                         <div class="inputbox">
-                            <label for="username">Password</label>
+                            <label for="username" style="font-family: Book Antiqua;">Password</label>
                             <br><br>
                             <input type="password" style="font-size: 20px;" id="password" name="password" required>
 
                         </div>
-                        <button type="submit">Log In</button><br><br>
-            <p><a href="{% url 'password_reset' %}"><center>Forgotten your password?</center></a></p>
-            <center> <h5>Don't have an account?</h5></center>
-          <center><a href="{% url 'register' %}">Sign Up</a></center>
+                        <button type="submit" style="font-family: Book Antiqua;">Log In</button><br><br>
+            <p><a href="{% url 'password_reset' %}" style="font-family: Book Antiqua;"><center>Forgotten your password?</center></a></p>
+            <center> <h5 style="font-family: Book Antiqua;">Don't have an account?</h5></center>
+          <center><a href="{% url 'register' %}" style="font-family: Book Antiqua;">Sign Up</a></center>
                         <br><br>
                     
 

@@ -13,6 +13,7 @@ h1{
 	padding-top: 10px;
 	color: rgb(24, 22, 4);
 	padding-bottom: 10px;
+	font-family: Bernard MT Condensed;
 }
 .container{
 	position: fixed;
@@ -63,7 +64,9 @@ form{
 	background: #eb9069;
 	letter-spacing: 0.05em;
 	border-radius: 20em;
-	margin-left: 500px;
+	margin-left: 485px;
+	margin-top: 14px;
+	
   }
   
   .cssbuttons-io-button svg {
@@ -71,11 +74,11 @@ form{
   }
   
   .cssbuttons-io-button:hover {
-	box-shadow: 0 0.5em 1.5em -0.5em #4d36d0be;
+	box-shadow: 0 0.5em 1.5em -0.5em #0c0c0ebe;
   }
   
   .cssbuttons-io-button:active {
-	box-shadow: 0 0.3em 1em -0.5em #4d36d0be;
+	box-shadow: 0 0.3em 1em -0.5em #f6f6f7be;
   }
 .paragraph_btn{
 	background-color: #fff;
@@ -943,4 +946,3 @@ margin-top: 25px;
     white-space: nowrap;
     transition: 0.3s;
   }
-
