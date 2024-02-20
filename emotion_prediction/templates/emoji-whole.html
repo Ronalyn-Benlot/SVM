@@ -21,9 +21,7 @@
 		background-color: black;
 	}
 
-	h1{
-		padding-bottom: -100px;
-	}
+	
 	.emoji{
 			padding-top: 500px;
 			justify-content: center;
@@ -32,15 +30,19 @@
 	.word{
 		padding-left: 550px;
 	}
-	h1{
-		
-		padding-bottom: -30px;
-		color: black;
-	}
+	
+		#text{
+	margin-top: 50px;
+}
+h1{
+	
+	color: #FFE347;
+	font-family:"Fontdiner Swanky";
+}
 		
 </style>
 </head>
-<body background="{%static 'assets/img/paper.jpg' %}">
+<body background="{%static 'img/cyan2.png' %}" style=" background-size: cover;">
 <!-- style=" background: linear-gradient(to bottom , pink,#feff79,#d2ff9d,	#b2d7df);background-size: 100% 100vh;"> -->
 	<div class="top">
 	<header id="header" class="header fixed-top d-flex align-items-center">
@@ -53,10 +55,10 @@
       <!-- Nav Menu -->
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{% url 'home' %}#hero" >Home</a></li>
+          <!-- <li><a href="{% url 'home' %}#hero" >Home</a></li>
           <li><a href="{% url 'home' %}#about">About</a></li>
           <li><a href="{% url 'home' %}#team">Team</a></li>
-          <li><a href="{% url 'home' %}#contact">Contact</a></li>
+          <li><a href="{% url 'home' %}#contact">Contact</a></li> -->
 		  <!-- <li><a href="{% url 'login' %}">Login</a></li> -->
 		<li><a href="{% url 'profile' %}"><img src="{% static 'assets/img/user.png' %}"  title="Profile"></a></li>
 
@@ -64,13 +66,14 @@
       </nav><!-- End Nav Menu --> 
       </div>
       <br>	
-	
-	<div class="container">
-		<h1 style="letter-spacing: 7px;">CHILDHOOD TALES EMOTION PREDICTOR</h1>
+	  
+
+	<div class="container" style="padding-top: -10px;">
+		<h1 style="letter-spacing: 7px; padding-top: -10; font-family:Fontdiner Swanky;">EMOTION-ON</h1>
 		<form method="post" enctype="multipart/form-data" action="{% url 'whole' %}">
 			{% csrf_token %}
 		
-				<input id="text" type="file" name="file" accept=".txt" placeholder="Upload your file here...">
+				<input  style="margin-top: 75px;" id="text" type="file" name="file" accept=".txt" placeholder="Upload your file here...">
 		
 			
 			<button type="submit" name="analyze" id="analyze" class="analyze_btn">ANALYZE</button>
@@ -85,7 +88,7 @@
 		{% endif %}
 	
 	</div>
-	<div class="emoji" style="padding-top: 510px;">
+	<div class="emoji" style="padding-top: 49wor0px;">
 		<div class="word">
 			<h6 class="fear" style="padding-left: 15px; color: #0a0303;">FEAR</h6>
 
@@ -100,18 +103,18 @@
 			<h6 class="surprise" style="color: #0a0303;">SUPRISE</h6>
 		<br>
 		</div>
-		<img class="img1" src="{%static 'assets/img/fear.png' %}" style="padding-left: 20px;">
+		<img class="img1" src="{%static '/emotions/fear.png' %}" style="padding-left: 20px;">
 
-		<img class="img2" src="{%static 'assets/img/angry.png' %}">
+	<img class="img2" src="{%static '/emotions/angry.png' %}">
 
-		<img class="img3" src="{%static 'assets/img/happy.png' %}">
+	<img class="img3" src="{%static '/emotions/happy.png' %}">
 
-		<img class="img4" src="{%static 'assets/img/sad.png' %}">
+	<img class="img4" src="{%static '/emotions/sad.png' %}">
 
-		<img class="img5" src="{%static 'assets/img/disgust.png' %}">
+	<img class="img5" src="{%static '/emotions/disgust.png' %}">
 
-		<img class="img6" src="{%static 'assets/img/surprise.png' %}">
-		<br>
+	<img class="img6" src="{%static '/emotions/surprise.png' %}">
+	<br>
 		{%if success %}
 		<div class="percent" style="padding-left: 20px;">
 			<p class="p1">{{ analyzed_story.fear }}%</p>

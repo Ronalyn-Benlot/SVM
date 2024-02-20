@@ -12,9 +12,10 @@ h1{
 	font-size: 40px;
 	text-align: center;
 	padding-top: 10px;
-	color: rgb(24, 22, 4);
+	color: #FFE347;
 	padding-bottom: 10px;
-	font-family: Bernard MT Condensed;
+	
+	
 }
 .container{
 	position: fixed;
@@ -40,11 +41,11 @@ form{
 	padding-left: 20px;
 }
 #text{
-	height: 250px;
+	height: 200px;
 	width: 1300px;
 	left: 105px;
 	font-size: 22px;
-	margin-top: 5px;
+	margin-top:20px;
 	font-family: sans-serif;
     box-sizing: border-box;
     border-radius: 20px;
@@ -66,8 +67,7 @@ form{
 	letter-spacing: 0.05em;
 	border-radius: 20em;
 	margin-left: 485px;
-	margin-top: 14px;
-	
+	margin-top: 38px;
   }
   
   .cssbuttons-io-button svg {
