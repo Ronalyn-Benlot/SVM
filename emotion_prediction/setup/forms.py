@@ -112,7 +112,7 @@ def data_preprocess(text, replace_patterns, word_to_stem, stopwords_set):
 
 class StoryForm(forms.Form):
     story = forms.CharField(
-        widget=forms.TextInput(attrs={"placeholder": "Enter text here...", "id": "text"})
+        widget=forms.TextInput(attrs={"placeholder": "Enter text here...", "id": "text","class": "form"})
     )
 
     def save(self, request, commit=True):

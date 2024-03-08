@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #cfdee6;
+    /* background-image: url(dove.jpg); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FEFEFE;
+    border: 1px solid white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    height: 5vh;
+    display:flex;
+    align-items: center; 
+    justify-content: center;
+    
+}
+
+.nav nav {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.nav nav a {
+    text-decoration: none;
+    color: #333; 
+    margin-right: 38px; 
+    font-family: DM Serif Display;
+    font-size: 25px;
+}
+.container {
+    background-color: #FEFEFE;
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 100%; /* Ensures container doesn't exceed viewport width */
+    width: 380px;
+    border-radius: 10px;
+}
+
+.container .logo {
+    
+    background: #ffffff;
+    text-align: center;
+    border-radius:10px 10px 0px 0px;
+    
+    
+}
+.container .logo img {
+    max-width: 100%; /* Ensure the image doesn't exceed the container width */
+    max-height: 450px; /* Set maximum height for the logo */
+}
+.container form{
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+}
+.container form .input {
+    margin: 10px;
+    display: flex;
+    width: 100%; /* Adjust width here */
+    margin-bottom: 15px;
+}
+
+.icon{
+    width: 40px;
+    font-size: 35px;
+}
+
+.container form .input input[type="email"],
+.container form .input input[type="text"],
+.container form .input input[type="password"] {
+    width: 70%; /* Adjust width here */
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.container form .submit {
+    display: flex;
+    justify-content: center;
+}
+
+.container form .submit input[type="submit"] {
+    width: 100%; /* Set initial width to 100% */
+    max-width: 120px; /* Set maximum width */
+    padding: 10px;
+    background-color: #F9AB55;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 20px;
+}
+
+.container form .submit input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.container form .forgot{
+    margin-top:15px;
+    display: flex;
+    justify-content: center;
+}
+.container form .forgot a{
+    text-decoration: none;
+    
+}
+
+.container form .forgot a:hover{
+    color: #F9AB55;
+}
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .container form .submit input[type="submit"] {
+        width: 50%; 
+    }
+    .nav {
+        padding: 10px 10px; /* Adjust padding for smaller screens */
+    }
+    .nav a{
+        margin-right: 10px;
+    }
+
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+    }
+}
