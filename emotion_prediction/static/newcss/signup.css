@@ -4,7 +4,10 @@
 }
 
 body {
-    background-color: #cfdee6;
+    /* background-color: #cfdee6; */
+    background-image:url(../newimg/bg32.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -3,7 +3,10 @@
     padding: 0;
 }
 body{
-    background-color: #cfdee6;
+    /* background-color: #cfdee6; */
+    background-image:url(../newimg/bg33.png) ;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100vh;
 }
 nav img{
@@ -117,7 +120,7 @@ footer{
     bottom: 0;
     height: 5.5vh;
     text-align: center;
-    background-color: #cedee7b3;
+    background-color: #cedee700;
 }
 
 

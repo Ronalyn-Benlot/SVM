@@ -15,10 +15,12 @@
 <body>
     <nav>
         <img src="{% static 'newimg/log.png' %}" alt="">
-        <a class="four" href="{% url 'home' %}#hero">Home</a>
-        <a class="four" href="{% url 'home' %}#about">About</a>
-        <a class="four" href="{% url 'home' %}#team">Team</a>
+        <a class="four" href="{% url 'privhome' %}#hero">Home</a>
+        <a class="four" href="{% url 'privhome' %}#about">About</a>
+        <a class="four" href="{% url 'privhome' %}#team">Team</a>
         <a href="{% url 'profile' %}" class="profile"><i class="bi bi-person-circle"></i></a>
+        <a class="four" style="margin-left:10px" href="{% url 'home' %}#hero">Log Out</a>
+
     </nav>
     
     <main>
@@ -149,10 +151,15 @@
                 </div>
             </div>
         </div>
+        <div class="download" style=" width:40%;margin-left:35%; " >
+            {% if analyzed_story %}
+                <h3 style="font-size:25px">To download the result,click<i class="bi bi-arrow-right"></i><a style="text-decoration:none; background-color:white;border-radius:10px; " href="{% url 'download-result' %}">Download</button></a> </h3>
+            {% endif %}
+        </div>
     </main>
     
     
-
+<br>
     <footer>
         <p>&copy;EMOJI-ON || 2024</p>
     </footer>

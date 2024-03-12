@@ -17,6 +17,8 @@ from django.core.paginator import Paginator
 def home(request):
     return render(request, 'index.html')
 
+def homeprivate(request):
+    return render(request, 'privateindex.html')
 
 def register(request):
     form = Userform
