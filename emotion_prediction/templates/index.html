@@ -1,6 +1,243 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maiden+Orange&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'newcss/landing.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href=""><img src="{% static 'landing/Logo.jpg'%}" alt="" width="300" height="50" style="margin-left: -125%;"></a>
+        <a href="{% url 'home' %}#landing">Home</a>
+        <a href="{% url 'home' %} #about">About</a>
+        <a href="{% url 'home' %}#team">Team</a>
+        <a href="{% url 'home' %}#contact">Contact</a>
+        <a class="signup" href="{% url 'register' %}">Sign Up</a>
+
+        
+    </nav>
+    <section id="landing" class="landing">
+        <div class="landing-page">
+            <div class="title">
+                <h5>EMOJI-ON</h5>
+                <p>The Magical Words Wizard!</p>
+            </div>
+            <div class="text">
+                <center><p>Are you ready to have a magical adventure through <br> the world of words and feelings?</p></center>
+            </div>
+            <br><br><br>
+            <div class="start">
+                <a href="{% url 'login' %}">LET'S GET STARTED!</a>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+        <div class="about-page">
+            <center><img src="{% static 'landing/Landing_About.jpg'%}" alt="" width="600" height="80"></center> 
+            <br><br>
+            <div class="text2">
+                <p>EMOJI-ON is like a cheerful friend who helps us explore the emotions twinkling through the words of our favorite tales. It's here to share 6 basic emotions that is universally known as stated by <strong>Paul Ekman</strong>:
+                the <strong style="color: rgb(247, 198, 51);">joy</strong> that makes us dance,the <strong style="color: rgb(107, 107, 248);">sadness</strong> that makes us strong,the <strong >fear</strong> that makes us courageous,the <strong style="color:rgb(255, 57, 57);">anger</strong> that makes us brave,the <strong style="color: rgb(3, 139, 53);">disgust</strong> that makes us appreciate the good stuff, and the <strong style="color: orange">surprise</strong>
+                that makes us curious
+                </p>
+            </div>
+            <div class="img2">
+                <center><img src="{% static 'landing/Landing_About0.jpg'%}" alt="" width="950"></center>
+            </div>
+            <div class="text3">
+                <p>Our mission at EMOJI-ON is simple: to support parents and teachers in fostering children's emotional development. We believe that storybooks not only aids in language acquisition but also lays the foundation of emotional development for children.</p>
+            </div>
+            <div class="img3-text4">
+                <div class="img3">
+                    <img src="{% static 'landing/Landing_About2.jpg'%}" alt="" width="180" height="180">
+                </div>
+                <div class="text4">
+                    <p>EMOJI-ON is not just for kids - it's a fantastic tool for parents and teachers too! Dive into the stories together, discuss the emotions, and create moments that sparkle in your hearts.</p>
+                </div>
+            </div>
+
+            <div class="img4-text5">
+                
+                <div class="text5">
+                    <p>Whether you're a young explorer seeking the heart of a story or a parent eager to embark on emotional journeys with your little ones, EMOJI-ON is 
+                        your joyful companion. Let the emotions unfold, and let the tales be a vibrant kaleidoscope of feelings!</p>
+                </div>
+                <div class="img4">
+                    <img src="{% static 'landing/Landing_About3.jpg'%}" alt="" width="180" height="180">
+                </div>
+            </div>
+
+            <div class="how">
+                <div class="img">
+                    <img src="{% static 'landing/Landing_About1.jpg'%}" alt="" width="80" height="80"> 
+                </div>
+                <div class="txt">
+                    <p>How Does it Work?</p>
+                </div>
+            </div>
+            <div class="how-content">
+                <p>
+                    Simply type or upload in the the story, and EMOJI-ON will work its magic, revealing the emotions within. It's like having a special
+                    emotion compass to navigate through the feelings woven into each story. We understand that every reader is unique, and so are their 
+                    preferences for exploring emotions in stories. That's why we offer two convenient options to suit your reading style:
+                </p>
+                
+                <p>
+                    <strong>PARAGRAPH</strong> <br>
+                    EMOJI-ON delves deep into the emotional landscape of each paragraph, providing insights into the specific emotions present at every paragraph at a time.
+                </p>
+
+                <p>
+                    <strong>WHOLE</strong>                   
+                    Prefer to see the bigger picture? Choose the Whole option, and EMOJI-ON will captures the essence of the narrative as a whole.
+                </p>
+            </div>
+            <div class="last-txt">
+                <p>
+                    Whether you opt for the detailed insights of the Paragraph option or the panoramic view of the <br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;Whole option, EMOJI-ON  empowers you to explore emotions in stories your way. 
+                    <br>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;So, dive in, choose your adventure, and let the emotions unfold!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="team-page">
+            <center><img class="teamlogo" src="{% static 'landing/Landing_Tean.jpg'%}" alt="" width="600" height="80"></center>
+        </div>
+        <div class="member-container">
+            <div class="member1">
+                <div class="img">
+                    <img src="{% static 'landing/rona.jpg'%}" alt="" width="200" height="200">
+                </div>
+                <div class="info">
+                    <h3>RONALYN BENLOT</h3>
+                    <p>Programmer</p>
+
+                    <a href=""><i class="bi bi-facebook fb"></i></a> <a href=""><i class="bi bi-envelope-fill gmail"></i></a>
+                </div>
+            </div>
+            <div class="member1">
+                <div class="img">
+                    <img src="{% static 'landing/anna.jpg'%}" alt="" width="200" height="200">
+                </div>
+                <div class="info2">
+                    <h3>ANNA CUADRA</h3>
+                    <p>Project Manager <br>Backend Developer</p>
+
+                    <a href=""><i class="bi bi-facebook fb"></i></a> <a href=""><i class="bi bi-envelope-fill gmail"></i></a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="member-container">
+            <div class="member1">
+                <div class="img">
+                    <img src="{% static 'landing/calan.png'%}" alt="" width="200" height="200">
+                </div>
+                <div class="info">
+                    <h3>&nbsp;MICHAEL CALAN &nbsp;</h3>
+                    <p>&nbsp;Frontend Developer</p>
+
+                    <a href=""><i class="bi bi-facebook fb"></i></a> <a href=""><i class="bi bi-envelope-fill gmail"></i></a>
+                </div>
+            </div>
+            <div class="member1">
+                <div class="img">
+                    <img src="{% static 'landing/nassef.jpg'%}" alt="" width="200" height="200">
+                </div>
+                <div class="info2">
+                    <h3>NASSEF SUMPA</h3>
+                    <p>&nbsp;Programmer</p>
+                    <a href=""><i class="bi bi-facebook fb"></i></a> <a href=""><i class="bi bi-envelope-fill gmail"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <center><img src="{% static 'landing/Landing_Contacts.jpg'%}" alt="" width="600" height="80"></center>
+    </section>
+    <div class="contacts-container">
+        <div class="left-side">
+            <p>We are open to any suggestion and feedback!</p>
+            <br>
+            <div class="address" style="display: flex;">
+                <img src="{% static 'landing/adress.png'%}" alt="" width="100" height="100">
+                <p style="margin-top: 20px;width:70%;" >Tiniguiban Heights,Puerto Princesa City, Palawan</p>
+            </div>
+            <br>
+            <br> <br>
+            <div class="address" style="display: flex;">
+                <img style="margin-left: 15px;" src="{% static 'landing/png-transparent-codepen-computer-icons-computer-software-mail-icon-angle-triangle-desktop-wallpaper.png'%}" alt="" width="80" height="80">
+                
+                <a style="margin-top: 20px;margin-left: 10px;width:70%;font-size:30px" href="">emoji-on@gmail.com</a>
+            </div>
+            <br>
+            <br> <br>
+            <div class="address" style="display: flex;">
+                <img style="margin-left: 15px;" src="{% static 'landing/pngtree-circle-phone-call-icon-in-black-color-png-image_6596895.png'%}" alt="" width="80" height="80">
+                <p style="margin-top: 20px; margin-left: 15px;width:70%;" >09517743206</p>
+
+                
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="input">
+                <input type="text" name="name_home" placeholder="&nbsp;&nbsp;Name">
+            </div>
+            <div class="input">
+                <input type="email" name="email_home" placeholder="&nbsp;&nbsp;Email">
+            </div>
+            <div class="input">
+                <input type="text" name="subject" placeholder="&nbsp;&nbsp;Subject">
+            </div>
+            <div class="input">
+                <input style="height:30vh;" type="text" name="message" placeholder="&nbsp;&nbsp;Message" class="placeholder-style">
+            </div>
+            <div class="input">
+                <input type="submit">
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+        <a style="margin-left: 10%;" href="#landing">Home</a>
+        <a href="#about">About</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+        <p style="margin-top: 3%;margin-left:6%">COPYRIGHT &copy;2024</p>
+        <img src="{% static 'landing/Logo.jpg'%}" alt=""width="300" height="50" style="margin-left:10%;padding:10px;">
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -35,13 +272,13 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container-fluid d-flex align-items-center justify-content-between">
       <a style=" align-items: start;" href="{% url 'home' %}" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="{% static 'newimg/log.png' %}">
+        <img src="{% static 'landing/Logo.jpg' %}">
            
           </a>
     
 <br>
       <!-- Nav Menu -->
-      <nav id="navmenu" class="navmenu">
+      <nav id="navmenu" class="navmenu" style="background-color:white;">
           <ul >
           <li><a href="{% url 'home' %}#hero" class="active">Home</a></li>
           <li><a href="{% url 'home' %}#about">About</a></li>
@@ -365,4 +602,4 @@
 
 </body>
 
-</html>
+</html> {% endcomment %}
