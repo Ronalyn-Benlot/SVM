@@ -30,7 +30,7 @@ def register(request):
             form.save()
             messages.success(request, "Registration success!")
             success = True
-            # return redirect('login')
+            return redirect('login')
         else:
             messages.error(request, "Form is not valid")
             success = False

@@ -24,6 +24,10 @@ nav a{
     font-size: 20px;
     color: black;
 }
+nav a:hover{
+    color: rgb(77, 74, 74);
+
+}
 .signup{
     margin-right: 50px;
     background-color: #EDDB92;
@@ -35,6 +39,9 @@ nav a{
     display: flex;
     text-align: center;
     justify-content: center;
+}
+.signup:hover{
+    background-color: #f8e9b0;
 }
 html {
     scroll-behavior: smooth;
@@ -96,6 +103,10 @@ section {
     font-family:Maiden Orange;
     font-size: 30px;
     color: black;
+}
+.start:hover{
+    background-color: #f8e9b0;
+
 }
 /*home/landing end*/
 
@@ -184,7 +195,7 @@ section {
     font-size: 23px;
     padding-top: 2%;
     width: 70%;
-    padding-left:280px;
+    padding-left:200px;
     margin: 0 auto;
     
 }
